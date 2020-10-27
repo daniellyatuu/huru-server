@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html class="no-js " lang="en">
+
+<!-- header -->
+{% include 'includes/admin_header.html' %}
+
+<body class="theme-cyan">
+    <!-- Page Loader -->
+    {% include 'includes/admin_preloader.html' %}
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <!-- Top Bar -->
+    {% include 'includes/admin_topbar.html' %}
+
+    <!-- Left Sidebar -->
+    {% include 'includes/admin_sidebar.html' %}
+
+    <!-- Chat-launcher -->
+    {% include 'includes/admin_chat.html' %}
+
+    <!-- Main Content -->
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Jquery Core Js -->
+    {% include 'includes/admin_footer.html' %}

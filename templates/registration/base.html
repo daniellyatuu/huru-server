@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'registration/includes/header.html' %}
+
+<body class="theme-cyan authentication sidebar-collapse">
+    <!-- Navbar -->
+    {% include 'registration/includes/navbar.html' %}
+    <div class="page-header">
+        <div class="page-header-image" style="background-image:url(/static/assets/images/login_bg.svg)"></div>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+    {% include 'registration/includes/footer.html' %}
+    {% include "includes/alert_script.html" %}
+</body>
+
+</html>
