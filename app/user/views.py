@@ -31,16 +31,3 @@ class UserLogout(LogoutView):
         messages.add_message(self.request, messages.SUCCESS,
                              'You successfully log out!')
         return super().get_next_page()
-
-
-class Home(View):
-    template_name = 'user/home.html'
-
-    @method_decorator(login_required(login_url='/user/login/'))
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
-
-    def get(self, request, *args, **kwargs):
-        context = {}
-        context['title'] = 'Home'
-        return render(request, self.template_name, context)

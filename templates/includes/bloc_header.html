@@ -1,0 +1,23 @@
+<div class="block-header">
+    <div class="row">
+        <div class="col-lg-7 col-md-6 col-sm-12">
+            <h2>{{page_title}}
+                <small class="text-muted">Welcome to Huru</small>
+            </h2>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
+            {% if page_title == 'article' %}
+            <a href="{% url 'huru_admin:add_article' %}" class="btn btn-info btn-sm float-md-right">ADD-ARTICLE</a>
+            {% elif page_title == 'testimony' %}
+            <a href="{% url 'huru_admin:add_testimony'  %}" class="btn btn-info btn-sm float-md-right">ADD-TESTIMONY</a>
+            {% else %}
+            <ul class="breadcrumb float-md-right">
+                <li class="breadcrumb-item"><a href="{% url 'huru_admin:home'  %}"><i class="zmdi zmdi-home"></i>
+                        Huru</a>
+                </li>
+                <li class="breadcrumb-item active">{{page_title}}</li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>

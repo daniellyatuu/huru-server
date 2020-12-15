@@ -3,6 +3,25 @@ from app.user.models import User
 from django.db import models
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    active = models.BooleanField(default=True)
+    added_by = models.ForeignKey(
+        User, related_name='user_category', on_delete=models.CASCADE)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = 'category'
+        ordering = ['-id']
+        verbose_name_plural = 'categories'
+
+    def article_list(self):
+        return self.category_article.all()
+
+
 class Article(models.Model):
     user = models.ForeignKey(
         User, related_name='user_article', on_delete=models.CASCADE)
@@ -10,6 +29,8 @@ class Article(models.Model):
     cover_photo = models.ImageField(upload_to='cover_photo')
     content = models.TextField()
     active = models.BooleanField(default=True)
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE, related_name='category_article', blank=True, null=True)
     belong_to = models.ForeignKey(
         Group, related_name='article_belong_to', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)

@@ -5,9 +5,21 @@
 <!-- header -->
 {% include 'includes/admin_header.html' %}
 
+
+{% block header %}
+
+{% endblock %}
+
+</head>
+
 <body class="theme-cyan">
+
+
+    {% comment %}
     <!-- Page Loader -->
     {% include 'includes/admin_preloader.html' %}
+    {% endcomment %}
+
 
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -28,3 +40,10 @@
 
     <!-- Jquery Core Js -->
     {% include 'includes/admin_footer.html' %}
+
+    {% block footer  %}
+
+    {% endblock %}
+</body>
+
+</html>

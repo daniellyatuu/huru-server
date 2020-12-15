@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
+from app.main.models import Article, Category
+from django.views.generic.detail import DetailView
 
 
 class HomeView(View):
@@ -9,6 +11,8 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
         context = {}
         context['title'] = 'Huru'
+        context['posts'] = Article.objects.filter(
+            active=True, belong_to__name='pwud')
         return render(request, self.template_name, context)
 
 
@@ -44,5 +48,15 @@ class BlogView(View):
 
     def get(self, request, *args, **kwargs):
         context = {}
-        context['title'] = 'Blog'
+        context['title'] = 'Information'
+        context['posts'] = Article.objects.filter(
+            active=True, belong_to__name='pwud')
         return render(request, self.template_name, context)
+
+
+class BlogDetailView(DetailView):
+    model = Article
+
+
+class CategoryDetailView(DetailView):
+    model = Category
