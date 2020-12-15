@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.user',
     'app.main',
+    'app.huru_admin',
 ]
 
 # change the built-in User model to my custom User table
@@ -65,6 +66,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'date_tag': 'templatetags.date_tag',
+            }
         },
     },
 ]
@@ -116,3 +120,6 @@ STATIC_ROOT = BASE_DIR / 'assets'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = 'huru_admin:home'
+LOGOUT_REDIRECT_URL = 'user:login'

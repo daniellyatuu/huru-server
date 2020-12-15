@@ -1,0 +1,21 @@
+<script>
+    $(document).ready(function () {
+        var message = '{%for msg in messages%}{{ msg }}{% endfor %}';
+        var message_tag = '{% for msg in messages %}{{ msg.tags }}{% endfor %}';
+
+        msg_tag = "";
+        if (message_tag == 'error') {
+        msg_tag = "alert-danger";
+        } else if (message_tag == 'success') {
+        msg_tag = "alert-success";
+        }
+        if (message != '') {
+        $('.alert').addClass(msg_tag);
+            $('.msg').html(message);
+            $('.wrong_account').delay(50).slideDown(350);
+            $('.wrong_account').delay(4000).slideUp();
+        }
+
+        $('.errorlist').removeClass('alert alert-danger').addClass('text-danger');
+    });
+</script>

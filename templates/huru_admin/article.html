@@ -1,0 +1,116 @@
+{% extends 'master/admin_base.html' %}
+{% load static %}
+{% load date_tag %}
+
+
+{% block header %}
+
+<style>
+    .zoom_image {
+        padding: 0;
+        transition: transform .2s;
+        margin: 0 auto;
+    }
+
+    .zoom_image:hover {
+        -ms-transform: scale(2.4);
+        /* IE 9 */
+        -webkit-transform: scal(2.4);
+        /* Safari 3-8 */
+        transform: scale(2.4);
+        cursor: zoom-in;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="content">
+
+    {% include 'includes/bloc_header.html' %}
+
+    <div class="container-fluid">
+
+        <!-- Striped Rows -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+
+                {% if articles.count != 0 %}
+                <div class="card">
+                    <div class="header">
+                        <h2> Article </h2>
+                        <ul class="header-dropdown">
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {% include "includes/alert.html" %}
+
+                    <div class="body table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>TITLE</th>
+                                    <th>COVER-PHOTO</th>
+
+                                    {% comment %}
+                                    <th>CONTENT</th>
+                                    {% endcomment %}
+
+                                    <th>BELONG-T0</th>
+                                    <th>DATE-POSTED</th>
+                                    <th>DATE-MODIFIED</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for article in articles %}
+                                <tr>
+                                    <th scope="row">{{forloop.counter}}</th>
+                                    <td>{{article}}</td>
+                                    <td>
+                                        <img src="/media/{{article.cover_photo}}" alt="cover photo" width="50"
+                                            class="zoom_image">
+                                    </td>
+
+                                    {% comment %}
+                                    <td>
+                                        {% if article.content|length > 50 %}
+
+                                        {{article.content|safe|slice:50}} ...
+
+                                        {% else %}
+
+                                        {{article.content|safe}}
+
+                                        {% endif %}
+                                    </td>
+                                    {% endcomment %}
+
+                                    <td>{{article.belong_to}}</td>
+                                    <td>{{article.date_posted|dateformat}}</td>
+                                    <td>{{article.date_modified|dateformat}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% else %}
+                <div class="card">
+                    <h2 class="text-center" style="padding: 50px;">No Article </h2>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+        <!-- #END# Striped Rows -->
+
+    </div>
+</section>
+
+{% endblock %}

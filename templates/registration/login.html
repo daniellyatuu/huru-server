@@ -1,0 +1,44 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12 content-center">
+        <div class="card-plain">
+            <form class="form" method="POST" action="">
+                {% csrf_token %}
+                <div class="header">
+                    <div class="logo-container">
+                        <img src="{% static 'assets/images/logo.svg' %}" alt="">
+                    </div>
+                    <h5>Log in</h5>
+                </div>
+                <div class="content">
+
+                    {% include "includes/alert.html" %}
+                    {{form.non_field_errors}}
+
+                    <div class="input-group input-lg">
+                        {{form.username}}
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-account-circle"></i>
+                        </span>
+                    </div>
+                    <div class="input-group input-lg">
+                        {{form.password}}
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer text-center">
+                    <input type="submit" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light"
+                        value="SIGN IN">
+
+                    <!-- <h6 class="m-t-20"><a href="forgot-password.html" class="link">Forgot Password?</a></h6> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

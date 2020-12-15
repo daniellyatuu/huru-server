@@ -1,0 +1,132 @@
+{% extends 'master/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg3 jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="container">
+        <div class="page-title-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Information</li>
+            </ul>
+            <h2>Posts</h2>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Blog Area -->
+<section class="blog-area ptb-100">
+    <div class="container">
+        <div class="row">
+
+            {% comment %}
+            <!-- post .start -->
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-30">
+                    <div class="post-image">
+                        <a href="single-blog.html" class="d-block">
+                            <img src="{% static 'assets/img/blog/1.jpg' %}" alt="image">
+                        </a>
+
+                        <div class="tag">
+                            <a href="#">Learning</a>
+                        </div>
+                    </div>
+
+                    <div class="post-content">
+                        <ul class="post-meta">
+                            <li class="post-author">
+                                <img src="{% static 'assets/img/user1.jpg' %}"
+                                    class="d-inline-block rounded-circle mr-2" alt="image">
+                                By: <a href="#" class="d-inline-block">Steven Smith</a>
+                            </li>
+                            <li><a href="#">August 30, 2019</a></li>
+                        </ul>
+                        <h3><a href="single-blog.html" class="d-inline-block">World largest elephant toothpaste
+                                experiment in 2019</a></h3>
+                        <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- post ./end -->
+            {% endcomment %}
+
+
+            {% if posts.count != 0 %}
+            <div class="shorting">
+                <div class="row">
+
+                    {% for post in posts %}
+                    <!-- post .start -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-blog-post mb-30">
+                            <div class="post-image">
+                                <a href="single-blog.html" class="d-block">
+                                    <img src="/media/{{post.cover_photo}}" alt="image">
+                                </a>
+
+                                {% if post.category %}
+                                <div class="tag">
+                                    <a href="#">{{post.category}}</a>
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="post-content">
+                                <ul class="post-meta">
+                                    <li class="post-author">
+                                        By: <a href="#" class="d-inline-block">{{post.user.group}}</a>
+                                    </li>
+                                    <li><a href="#">{{post.date_posted}}</a></li>
+                                </ul>
+                                <h3><a href="single-blog.html" class="d-inline-block">{{post.title}}</a></h3>
+                                <p>
+                                    {% if post.content|length > 500 %}
+
+                                    {{post.content|safe|slice:500}} ...
+
+                                    {% else %}
+
+                                    {{post.content|safe}}
+
+                                    {% endif %}
+                                </p>
+                                {% if post.content|length > 500 %}
+                                <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- post .end -->
+                    {% endfor %}
+
+                </div>
+            </div>
+            {%else%}
+
+
+            <div class="col-md-12 card text-center" style="padding: 20px;">No Post</div>
+
+            {% endif %}
+
+            {% comment %}
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="pagination-area text-center">
+                    <span class="page-numbers current" aria-current="page">1</span>
+                    <a href="#" class="page-numbers">2</a>
+                    <a href="#" class="page-numbers">3</a>
+                    <a href="#" class="page-numbers">4</a>
+                    <a href="#" class="page-numbers">5</a>
+                    <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+            {% endcomment %}
+
+        </div>
+    </div>
+</section>
+<!-- End Blog Area -->
+{% endblock %}

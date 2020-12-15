@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="zxx">
+
+<!-- header -->
+{% include 'includes/header.html' %}
+
+<body>
+
+    <!-- Preloader -->
+    {% include 'includes/preloader.html' %}
+
+    <!-- menu -->
+    {% include 'includes/menu.html' %}
+
+    <!-- search -->
+    {% include 'includes/search.html' %}
+
+
+    <!-- content -->
+    {% block content %}{% endblock %}
+
+    <!-- footer text -->
+    {% include 'includes/footer_text.html' %}
+
+    <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
+
+    <!-- footer -->
+    {% include 'includes/footer.html' %}
+</body>
+
+</html>
