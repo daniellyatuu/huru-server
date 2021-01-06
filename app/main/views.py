@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
-from app.main.models import Article, Category
+from app.main.models import Article, Category, Testimony, Service
 from django.views.generic.detail import DetailView
 
 
@@ -13,6 +13,7 @@ class HomeView(View):
         context['title'] = 'Huru'
         context['posts'] = Article.objects.filter(
             active=True, belong_to__name='pwud')
+        context['testimonies'] = Testimony.objects.all()
         return render(request, self.template_name, context)
 
 
@@ -40,6 +41,7 @@ class TestimonyView(View):
     def get(self, request, *args, **kwargs):
         context = {}
         context['title'] = 'Testimony'
+        context['testimonies'] = Testimony.objects.all()
         return render(request, self.template_name, context)
 
 
@@ -60,3 +62,13 @@ class BlogDetailView(DetailView):
 
 class CategoryDetailView(DetailView):
     model = Category
+
+
+class ServiceView(View):
+    template_name = 'main/services.html'
+
+    def get(self, request, *args, **kwargs):
+        context = {}
+        context['title'] = 'Services'
+        context['services'] = Service.objects.all()
+        return render(request, self.template_name, context)

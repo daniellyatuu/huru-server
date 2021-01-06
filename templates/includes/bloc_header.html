@@ -10,6 +10,8 @@
             <a href="{% url 'huru_admin:add_article' %}" class="btn btn-info btn-sm float-md-right">ADD-ARTICLE</a>
             {% elif page_title == 'testimony' %}
             <a href="{% url 'huru_admin:add_testimony'  %}" class="btn btn-info btn-sm float-md-right">ADD-TESTIMONY</a>
+            {% elif page_title == 'service' %}
+            <a href="{% url 'huru_admin:add_service'  %}" class="btn btn-info btn-sm float-md-right">ADD-SERVICE</a>
             {% else %}
             <ul class="breadcrumb float-md-right">
                 <li class="breadcrumb-item"><a href="{% url 'huru_admin:home'  %}"><i class="zmdi zmdi-home"></i>

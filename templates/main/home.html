@@ -1,8 +1,8 @@
 {% extends 'master/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 
 {% block content %}
-
 
 {% comment %}
 <!-- Start Main Banner -->
@@ -54,17 +54,17 @@
                 <!-- SLIDE  -->
                 <li data-index="rs-3049" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0"
                     data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
-                    data-masterspeed="2000" data-thumb="{% static 'assets/img/main-banner1.jpg' %}" data-rotate="0"
+                    data-masterspeed="2000" data-thumb="{% static 'assets/img/huru-banner1.jpg' %}" data-rotate="0"
                     data-saveperformance="off" data-title="First Slide" data-param1="" data-param2="" data-param3=""
                     data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                     data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="{% static 'assets/img/main-banner1.jpg' %}" alt="" data-bgposition="center center"
+                    <img src="{% static 'assets/img/huru-banner1.jpg' %}" alt="" data-bgposition="center center"
                         data-kenburns="on" data-duration="7000" data-ease="Linear.easeNone" data-scalestart="100"
                         data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500"
                         data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 
-                    <div class="tp-caption NotGeneric-Icon tp-resizeme" id="slide-3049-layer-8"
+                    <div class="tp-caption NotGeneric-Icon" id="slide-3049-layer-8"
                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                         data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-70']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
@@ -94,7 +94,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <a href="courses-2-columns-style-1.html" class="default-btn"><i
+                        <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
                                 class="label text-capitalize">search
                                 services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
@@ -104,15 +104,16 @@
                 <!-- SLIDE  -->
                 <li data-index="rs-3045" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0"
                     data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
-                    data-masterspeed="2000" data-thumb="{% static 'assets/img/main-banner2.jpg' %}" data-rotate="0"
+                    data-masterspeed="2000" data-thumb="{% static 'assets/img/huru-banner2.jpg' %}" data-rotate="0"
                     data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"
                     data-title="Second Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
                     data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="{% static 'assets/img/main-banner2.jpg' %}" alt="" data-bgposition="center center"
+                    <img src="{% static 'assets/img/huru-banner2.jpg' %}" alt="" data-bgposition="center center"
                         data-kenburns="on" data-duration="7000" data-ease="Linear.easeNone" data-scalestart="100"
                         data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 500"
                         data-offsetend="0 -500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                        
 
                     <div class="tp-caption NotGeneric-Icon tp-resizeme" id="slide-3049-layer-8"
                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -144,7 +145,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <a href="courses-2-columns-style-1.html" class="default-btn"><i
+                        <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
                                 class="label text-capitalize">search
                                 services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
@@ -152,14 +153,14 @@
                 </li>
 
                 <!-- SLIDE  -->
-                <li data-index="rs-3046" data-transition="fadetotopfadefrombottom" data-slotamount="default"
+                <li data-index="rs-3046" data-transition="zoomin" data-slotamount="default"
                     data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power3.easeInOut"
                     data-easeout="Power3.easeInOut" data-masterspeed="1500"
-                    data-thumb="{% static 'assets/img/main-banner3.jpg' %}" data-rotate="0" data-saveperformance="off"
+                    data-thumb="{% static 'assets/img/huru-banner3.jpg' %}" data-rotate="0" data-saveperformance="off"
                     data-title="Third Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
                     data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="{% static 'assets/img/main-banner3.jpg' %}" alt="" data-bgposition="center center"
+                    <img src="{% static 'assets/img/huru-banner3.jpg' %}" alt="" data-bgposition="center center"
                         data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
                         data-no-retina>
 
@@ -194,7 +195,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        <a href="courses-2-columns-style-1.html" class="default-btn"><i
+                        <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
                                 class="label text-capitalize">search
                                 services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
@@ -283,62 +284,66 @@
 <!-- testimony .start -->
 <section class="blog-area pt-100 pb-70">
     <div class="container">
+        
         <div class="section-title text-left">
             <h2>Testimony</h2>
             <a href="blog-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span
                     class="label">View All</span><i class='bx bx-show-alt icon-arrow after'></i></a>
         </div>
+            
+        {% if testimonies.count != 0 %}
 
         <div class="shorting">
             <div class="row">
 
-                {% for post in posts %}
-                <!-- post .start -->
+                {% for obj in testimonies %}
+                <!-- testimony .start -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="/media/{{post.cover_photo}}" alt="image">
-                            </a>
-                            
+                        <div style="height: 200px; width: 100%;">
+                            {% video obj.url '100% x 100%' %}
                         </div>
 
                         <div class="post-content">
                             <ul class="post-meta">
                                 <li class="post-author">
-                                    By: <a href="#" class="d-inline-block">{{post.user.group}}</a>
+                                    Date posted: <a href="javascript:void(0);" class="d-inline-block">{{obj.date_posted}}</a>
                                 </li>
-                                <li><a href="#">{{post.date_posted}}</a></li>
                             </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">{{post.title}}</a></h3>
+                            <h3><a href="single-blog.html" class="d-inline-block">{{obj.title}}</a></h3>
                             <p>
-                                {% if post.content|length > 500 %}
+                                {% if obj.content|length > 300 %}
 
-                                {{post.content|safe|slice:500}} ...
+                                {{obj.content|safe|slice:300}} ...
 
                                 {% else %}
 
-                                {{post.content|safe}}
+                                {{obj.content|safe}}
 
                                 {% endif %}
                             </p>
-                            {% if post.content|length > 500 %}
+                            {% if obj.content|length > 300 %}
                             <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
+                            
                         </div>
                     </div>
                 </div>
-                <!-- post .end -->
+                <!-- testimony .end -->
                 {% endfor %}
 
             </div>
         </div>
-        
+        {% else %}
         <h5 class="text-center card" style="padding: 10px;">No Testimony</h5>
+        {% endif %}
 
     </div>
 </section>
 <!-- testimony ./end -->
+
+    
+    
 
 <!-- Start Funfacts Area -->
 <section class="funfacts-area pt-100">

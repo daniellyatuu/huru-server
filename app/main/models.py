@@ -1,6 +1,7 @@
 from django.contrib.auth.models import Group
 from app.user.models import User
 from django.db import models
+from embed_video.fields import EmbedVideoField
 
 
 class Category(models.Model):
@@ -45,7 +46,7 @@ class Article(models.Model):
 
 class Testimony(models.Model):
     title = models.CharField(max_length=255)
-    url = models.CharField(max_length=100)
+    url = EmbedVideoField()
     content = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=True)
     date_posted = models.DateTimeField(auto_now_add=True)
@@ -57,3 +58,19 @@ class Testimony(models.Model):
 
     def __str__(self):
         return '{}'.format(self.title)
+
+
+class Service(models.Model):
+    facility = models.CharField(max_length=255)
+    facility_type = models.CharField(max_length=255)
+    service_offered = models.TextField()
+    contact = models.CharField(max_length=17)
+    region = models.CharField(max_length=50)
+    district = models.CharField(max_length=50)
+    location = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ['-id']
+
+    def __str__(self):
+        return self.facility
