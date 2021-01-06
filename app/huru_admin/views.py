@@ -4,10 +4,10 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponse
 from django.contrib import messages
 from django.shortcuts import render
-from app.main.models import Article, Testimony
+from app.main.models import Article, Testimony, Service
 from django.views import View, generic
 from resizeimage import resizeimage
-from .forms import CreateArticle, CreateTestimony
+from .forms import CreateArticle, CreateTestimony, CreateService
 from django.urls import reverse
 from PIL import Image
 import datetime
@@ -131,3 +131,34 @@ class AddTestimonyView(generic.CreateView):
         messages.add_message(self.request, messages.SUCCESS,
                              'Testimony was added successfully')
         return reverse('huru_admin:testimony_view')
+
+
+class ServiceView(View):
+    template_name = 'huru_admin/service.html'
+
+    @method_decorator(login_required(login_url='/auth/'))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        context = {}
+        context['title'] = 'Service'
+        context['page_title'] = 'service'
+        context['services'] = Service.objects.all()
+        return render(request, self.template_name, context)
+
+
+class AddServiceView(generic.CreateView):
+    model = Service
+    form_class = CreateService
+    extra_context = {'title': 'add service'}
+    template_name = 'huru_admin/service_form.html'
+
+    @method_decorator(login_required(login_url='/auth/'))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_success_url(self):
+        messages.add_message(self.request, messages.SUCCESS,
+                             'Service was added successfully')
+        return reverse('huru_admin:service_view')

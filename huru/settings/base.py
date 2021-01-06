@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'app.user',
     'app.main',
     'app.huru_admin',
+    'embed_video',
 ]
 
 # change the built-in User model to my custom User table

@@ -3,6 +3,8 @@
 {% url 'huru_admin:add_article' as add_article  %}
 {% url 'huru_admin:testimony_view' as testimony_view  %}
 {% url 'huru_admin:add_testimony' as add_testimony  %}
+{% url 'huru_admin:service_view' as service_view  %}
+{% url 'huru_admin:add_service' as add_service  %}
 
 {% load static %}
 <aside id="leftsidebar" class="sidebar">
@@ -16,7 +18,7 @@
                         <h4 class="text-uppercase">{{request.user}}</h4>
                         <small>{{request.user.group}}</small>
                     </div>
-
+                    
                 </div>
             </li>
             <li class="header">MAIN</li>
@@ -28,7 +30,8 @@
                     href="{% url 'huru_admin:article'  %}"><i class="zmdi zmdi-assignment"></i><span>Article</span> </a>
             </li>
             <li class="{% if request.path == testimony_view or request.path == add_testimony %}active{% endif %}"> <a href="{% url 'huru_admin:testimony_view'  %}"><i class="zmdi zmdi-grid"></i><span>Testimony</span></a></li>
-
+            <li class="{% if request.path == service_view or request.path == add_service %}active{% endif %}"> <a href="{% url 'huru_admin:service_view'  %}"><i class="zmdi zmdi-view-list"></i><span>Service</span></a></li>
+            
             <li class="header">HURU USERS</li>
             <li> <a href="javascript:void(0);"><i class="zmdi zmdi-accounts"></i><span>Users</span> </a>
 

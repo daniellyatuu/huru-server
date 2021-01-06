@@ -1,5 +1,5 @@
 from django import forms
-from app.main.models import Article, Testimony
+from app.main.models import Article, Testimony, Service
 from django.forms.widgets import TextInput, FileInput, Textarea, Select, CheckboxInput
 
 
@@ -31,4 +31,20 @@ class CreateTestimony(forms.ModelForm):
             # 'belong_to': Select(attrs={'class': 'form-control show-tick'}),
             # 'category': Select(attrs={'class': 'form-control show-tick'}),
             'active': CheckboxInput(attrs={'id': 'checkbox'}),
+        }
+
+
+class CreateService(forms.ModelForm):
+    class Meta:
+        model = Service
+        fields = ['facility', 'facility_type', 'service_offered',
+                  'contact', 'region', 'district', 'location']
+        widgets = {
+            'facility': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter facility'}),
+            'facility_type': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter facility type'}),
+            'service_offered': Textarea(attrs={'class': 'form-control no-resize',  'placeholder': 'Enter services offered', 'rows': 40, 'id': 'summernote', 'style': 'display: none;'}),
+            'contact': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter contact'}),
+            'region': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter region'}),
+            'district': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter district'}),
+            'location': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter location'}),
         }

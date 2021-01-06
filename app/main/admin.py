@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.main.models import Article, Category, Testimony
+from app.main.models import Article, Category, Testimony, Service
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -18,3 +18,4 @@ class TestimonyAdmin(admin.ModelAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Testimony, TestimonyAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Service)

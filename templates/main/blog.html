@@ -3,8 +3,9 @@
 
 
 {% block content %}
+
 <!-- Start Page Title Area -->
-<div class="page-title-area item-bg3 jarallax" data-jarallax='{"speed": 0.3}'>
+<div class="page-title-area page-title-style-three item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
         <div class="page-title-content">
             <ul>
@@ -16,44 +17,12 @@
     </div>
 </div>
 <!-- End Page Title Area -->
+    
 
 <!-- Start Blog Area -->
 <section class="blog-area ptb-100">
     <div class="container">
         <div class="row">
-
-            {% comment %}
-            <!-- post .start -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog-post mb-30">
-                    <div class="post-image">
-                        <a href="single-blog.html" class="d-block">
-                            <img src="{% static 'assets/img/blog/1.jpg' %}" alt="image">
-                        </a>
-
-                        <div class="tag">
-                            <a href="#">Learning</a>
-                        </div>
-                    </div>
-
-                    <div class="post-content">
-                        <ul class="post-meta">
-                            <li class="post-author">
-                                <img src="{% static 'assets/img/user1.jpg' %}"
-                                    class="d-inline-block rounded-circle mr-2" alt="image">
-                                By: <a href="#" class="d-inline-block">Steven Smith</a>
-                            </li>
-                            <li><a href="#">August 30, 2019</a></li>
-                        </ul>
-                        <h3><a href="single-blog.html" class="d-inline-block">World largest elephant toothpaste
-                                experiment in 2019</a></h3>
-                        <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- post ./end -->
-            {% endcomment %}
-
 
             {% if posts.count != 0 %}
             <div class="shorting">
@@ -70,7 +39,7 @@
 
                                 {% if post.category %}
                                 <div class="tag">
-                                    <a href="#">{{post.category}}</a>
+                                    <a href="{% url 'main:category_information' post.category_id %}">{{post.category}}</a>
                                 </div>
                                 {% endif %}
                             </div>
