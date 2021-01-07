@@ -3,14 +3,22 @@ from django.http import HttpResponse
 from django.views import View
 from app.main.models import Article, Category, Testimony, Service
 from django.views.generic.detail import DetailView
+from django.utils.translation import gettext as _
+from django.utils import translation
 
 
 class HomeView(View):
     template_name = 'main/home.html'
 
     def get(self, request, *args, **kwargs):
+
+        # user_language = 'sw'
+        # translation.activate(user_language)
+        # request.session[translation.LANGUAGE_SESSION_KEY] = user_language
+
         context = {}
         context['title'] = 'Huru'
+        context['hello'] = _('hello')
         context['posts'] = Article.objects.filter(
             active=True, belong_to__name='pwud')
         context['testimonies'] = Testimony.objects.all()

@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-07 14:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app\main\views.py:21
+msgid "hello"
+msgstr "habari"
+
+#: .\templates\main\home.html:73 .\templates\main\home.html:123
+#: .\templates\main\home.html:171
+msgid "You are not alone"
+msgstr "Hauko peke yako"
+
+#: .\templates\main\home.html:82
+msgid "Recovery is Possible"
+msgstr "Kupona kunawezekana"
+
+#: .\templates\main\home.html:90
+msgid ""
+"You can stop using drugs, you just have to make the decision to do so today."
+msgstr "Unaweza kuacha kutumia dawa za kulevya, lazima ufanye uamuzi wa kufanya hivyo leo."
+
+#: .\templates\main\home.html:100 .\templates\main\home.html:150
+#: .\templates\main\home.html:198
+msgid "search services"
+msgstr "huduma za utaftaji"
+
+#: .\templates\main\home.html:132
+msgid "Are you ready to get the real you back?"
+msgstr "Je! Uko tayari kurudisha uhalisia wako?"
+
+#: .\templates\main\home.html:140
+msgid ""
+"We will help you to find where you can go for treatment and other essential "
+"services"
+msgstr "Tutakusaidia kupata huduma za matibabu na mahitaji mengine muhimu"
+
+#: .\templates\main\home.html:180
+msgid "Addiction affects all communities"
+msgstr "Uraibu huathiri jamii zote"
+
+#: .\templates\main\home.html:188
+msgid ""
+"Making the decision to find a detox center or drug or alcohol rehab is the "
+"first step toward a new, healthy life."
+msgstr "Kufanya uamuzi wa kupata kituo cha detox au rehab ya madawa ya kulevya au pombe ni hatua ya kwanza kuelekea maisha mapya, yenye afya."
+
+#: .\templates\main\home.html:213
+msgid "Our Popular Posts"
+msgstr "Machapisho Yetu Maarufu"
+
+#: .\templates\main\home.html:215
+msgid "All Posts"
+msgstr "Machapisho Yote"
+
+#~ msgid "my name is Daniel"
+#~ msgstr "jina langu ni Daniel"

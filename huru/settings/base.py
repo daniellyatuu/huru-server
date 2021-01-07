@@ -45,6 +45,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -101,6 +102,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('en', 'English'),
+    ('sw', 'Swahili'),
+]
+
+# LANGUAGES = [
+#     ('en', _('English')),
+#     ('sw', _('Kiswahili')),
+# ]
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -124,3 +135,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = 'huru_admin:home'
 LOGOUT_REDIRECT_URL = 'user:login'
+
+LOCALE_PATHS = [
+    BASE_DIR, 'locale'
+]

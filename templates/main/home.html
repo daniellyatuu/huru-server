@@ -1,6 +1,7 @@
 {% extends 'master/base.html' %}
 {% load static %}
 {% load embed_video_tags %}
+{% load i18n %}
 
 {% block content %}
 
@@ -69,7 +70,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-70']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        You are not alone
+                        {% trans 'You are not alone' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3049-layer-8"
@@ -78,7 +79,7 @@
                         data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none"
                         data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        Recovery is Possible
+                        {% trans 'Recovery is Possible' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3049-layer-4"
@@ -86,7 +87,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1200,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        You can stop using drugs, you just have to make the decision to do so today.
+                        {% trans 'You can stop using drugs, you just have to make the decision to do so today.' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8"
@@ -96,8 +97,7 @@
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
                         <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
-                                class="label text-capitalize">search
-                                services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                class="label text-capitalize">{% trans 'search services' %}</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                     </div>
                 </li>
 
@@ -120,7 +120,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-70']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        You are not alone
+                        {% trans 'You are not alone' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-1"
@@ -129,7 +129,7 @@
                         data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none"
                         data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        Are you ready to get the real you back?
+                        {% trans 'Are you ready to get the real you back?' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-4"
@@ -137,7 +137,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1200,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        We will help you to find where you can go for treatment and other essential services
+                        {% trans 'We will help you to find where you can go for treatment and other essential services' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8"
@@ -147,8 +147,7 @@
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
                         <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
-                                class="label text-capitalize">search
-                                services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                class="label text-capitalize">{% trans 'search services' %}</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                     </div>
                 </li>
 
@@ -169,7 +168,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-70']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        You are not alone
+                        {% trans 'You are not alone' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-3" id="slide-3046-layer-1"
@@ -178,7 +177,7 @@
                         data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none"
                         data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        Addiction affects all communities
+                        {% trans 'Addiction affects all communities' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-2" id="slide-3046-layer-4"
@@ -186,8 +185,7 @@
                         data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']"
                         data-width="none" data-height="none" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1200,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                        Making the decision to find a detox center or drug or alcohol rehab is the first step toward a
-                        new, healthy life.
+                        {% trans 'Making the decision to find a detox center or drug or alcohol rehab is the first step toward a new, healthy life.' %}
                     </div>
 
                     <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8"
@@ -197,8 +195,7 @@
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1400,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
                         <a href="{% url 'main:service_list' %}" class="default-btn"><i
                                 class='bx bx-move-horizontal icon-arrow before'></i><span
-                                class="label text-capitalize">search
-                                services</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                class="label text-capitalize">{% trans 'search services' %}</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                     </div>
                 </li>
             </ul>
@@ -213,10 +210,9 @@
 <section class="courses-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-left">
-            <h2>Our Popular Posts</h2>
+            <h2>{% trans 'Our Popular Posts' %}</h2>
             {% if posts.count >= 10 %}
-            <a href="" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">All
-                    Posts</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+            <a href="" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{% trans 'All Posts' %}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
             {% endif %}
         </div>
 
