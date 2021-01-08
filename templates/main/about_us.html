@@ -1,6 +1,6 @@
 {% extends 'master/base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block content %}
     
@@ -10,10 +10,10 @@
     <div class="container">
         <div class="page-title-content">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>About</li>
+                <li><a href="index.html">{% trans 'Home' %}</a></li>
+                <li>{% trans 'About' %}</li>
             </ul>
-            <h2>About Us</h2>
+            <h2>{% trans 'About Us' %}</h2>
         </div>
     </div>
 </div>
@@ -25,33 +25,33 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="about-content left-content">
-                    <h2>WHO ARE WE?</h2>
+                    <h2>{% trans 'WHO ARE WE?' %}</h2>
                     
                     <p style="text-align: justify;text-justify: inter-word;">
-                        We are team of digital health researchers from Muhimbili University of Health and Allied Sciences,
+                        {% trans 'We are team of digital health researchers from Muhimbili University of Health and Allied Sciences,
                          Ministry of Health Tanzania working together with Casa famiglia rosseta Italy.
                            We have developed this application to increase information access for people
                             with drug use disorders and their care takers as well as the healthcare workers.
                              This is to ensure that people with drug use disorders get the best evidence-based 
                              services and health care workers have access to information on how to best
-                              to care and treat their patients.
+                              to care and treat their patients.' %}
                     </p>
 
                     <p style="text-align: justify;text-justify: inter-word;">
-                        Huru App is a referral service that provides information about addiction treatment practitioners and facilities. 
+                        {% trans 'Huru App is a referral service that provides information about addiction treatment practitioners and facilities.' %}
                     </p>
 
                     <p style="text-align: justify;text-justify: inter-word;">
-                        Huru App is not a medical provider or treatment facility and does not provide medical advice. 
+                        {% trans 'Huru App is not a medical provider or treatment facility and does not provide medical advice.' %}
                     </p>
 
                     <p style="text-align: justify;text-justify: inter-word;">
-                        Huru App does not endorse any treatment facility or guarantee the quality 
-                        of care provided, or the results to be achieved, by any treatment facility. 
+                        {% trans 'Huru App does not endorse any treatment facility or guarantee the quality 
+                        of care provided, or the results to be achieved, by any treatment facility.' %} 
                     </p>
 
                     <p style="text-align: justify;text-justify: inter-word;">
-                        The information provided by Huru App is not a substitute for professional treatment advice.
+                        {% trans 'The information provided by Huru App is not a substitute for professional treatment advice.' %}
                     </p>
 
                 </div>
@@ -79,16 +79,16 @@
 
             <div class="mission-slides owl-carousel owl-theme">
                 <div>
-                    <h3>Mission</h3>
+                    <h3>{% trans 'Mission' %}</h3>
                     <p style="text-align: justify;text-justify: inter-word;">
-                        To create a happy community where people are free from addiction and engage in productive activities
+                        {% trans 'To create a happy community where people are free from addiction and engage in productive activities' %}
                     </p>
                     
-                    <h3>Vission</h3>
+                    <h3>{% trans 'Vission' %}</h3>
                     <p style="text-align: justify;text-justify: inter-word;">
-                        To ensure access of information and services that facilitate recovery of
+                        {% trans 'To ensure access of information and services that facilitate recovery of
                          people from substance use disorder and build a healthy community
-                          which is free from drug addiction
+                          which is free from drug addiction' %}
                     </p>
 
                 </div>

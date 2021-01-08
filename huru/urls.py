@@ -13,17 +13,3 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 admin.site.site_header = 'Huru adminstration'
 admin.site.site_title = 'Huru'
-
-
-# urlpatterns = [
-#     path('super-admin/', admin.site.urls),
-# ]
-
-# urlpatterns += i18n_patterns(
-#     path('', include('app.main.urls')),
-#     path('auth/', include('app.user.urls')),
-#     path('admin/', include('app.huru_admin.urls')),
-#     prefix_default_language=False,
-# ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# admin.site.site_header = 'Huru adminstration'
-# admin.site.site_title = 'Huru'
