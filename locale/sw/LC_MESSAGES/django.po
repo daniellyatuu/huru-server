@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-08 11:56+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\includes\footer_text.html:11
+msgid "Copyright"
+msgstr "Hakimiliki"
+
+#: .\templates\includes\footer_text.html:11
+msgid "Huru all rights reserved."
+msgstr "Huru haki zote zimehifadhiwa."
+
+#: .\templates\includes\menu.html:53 .\templates\includes\menu.html:140
+#: .\templates\main\about_us.html:13 .\templates\main\blog.html:12
+#: .\templates\main\services.html:13 .\templates\main\testimony.html:13
+msgid "Home"
+msgstr "Nyumbani"
+
+#: .\templates\includes\menu.html:56 .\templates\includes\menu.html:143
+#: .\templates\main\blog.html:13
+msgid "Information"
+msgstr "Habari"
+
+#: .\templates\includes\menu.html:59 .\templates\includes\menu.html:146
+msgid "Testimonies"
+msgstr "Ushuhuda"
+
+#: .\templates\includes\menu.html:61 .\templates\includes\menu.html:148
+#: .\templates\main\services.html:14
+msgid "Find Services"
+msgstr "Pata Huduma"
+
+#: .\templates\includes\menu.html:63 .\templates\includes\menu.html:150
+#: .\templates\main\about_us.html:16
+msgid "About Us"
+msgstr "Kuhusu sisi"
+
+#: .\templates\main\about_us.html:14
+msgid "About"
+msgstr "Kuhusu"
+
+#: .\templates\main\about_us.html:28
+msgid "WHO ARE WE?"
+msgstr "SISI NI NANI?"
+
+#: .\templates\main\about_us.html:41
+msgid ""
+"Huru App is a referral service that provides information about addiction "
+"treatment practitioners and facilities."
+msgstr "Huru App ni huduma ya rufaa ambayo hutoa habari kuhusu watendaji wa matibabu na madawa ya kulevya."
+
+#: .\templates\main\about_us.html:45
+msgid ""
+"Huru App is not a medical provider or treatment facility and does not "
+"provide medical advice."
+msgstr "Huru App sio mtoa huduma ya matibabu au kituo cha matibabu na haitoi ushauri wa matibabu."
+
+#: .\templates\main\about_us.html:54
+msgid ""
+"The information provided by Huru App is not a substitute for professional "
+"treatment advice."
+msgstr "Habari iliyotolewa na Huru App sio mbadala wa ushauri wa matibabu ya kitaalam."
+
+#: .\templates\main\about_us.html:82
+msgid "Mission"
+msgstr "Utume"
+
+#: .\templates\main\about_us.html:84
+msgid ""
+"To create a happy community where people are free from addiction and engage "
+"in productive activities"
+msgstr "Kuunda jamii yenye furaha ambapo watu wako huru kutoka kwa uraibu na wanafanya shughuli za uzalishaji"
+
+#: .\templates\main\about_us.html:87
+msgid "Vission"
+msgstr "Maono"
+
+#: .\templates\main\blog.html:15
+msgid "Posts"
+msgstr "Machapisho"
+
+#: .\templates\main\blog.html:67 .\templates\main\home.html:320
+msgid "Read More"
+msgstr "Soma zaidi"
+
+#: .\templates\main\blog.html:80 .\templates\main\home.html:332
+msgid "No Post"
+msgstr "Hakuna Chapisho"
+
+#: .\templates\main\home.html:218 .\templates\main\home.html:236
+#: .\templates\main\home.html:254
+msgid "You are not alone"
+msgstr "Hauko peke yako"
+
+#: .\templates\main\home.html:219
+msgid "Recovery is Possible"
+msgstr "Kupona kunawezekana"
+
+#: .\templates\main\home.html:220
+msgid ""
+"You can stop using drugs, you just have to make the decision to do so today."
+msgstr "Unaweza kuacha kutumia dawa za kulevya, lazima ufanye uamuzi wa kufanya hivyo leo."
+
+#: .\templates\main\home.html:223 .\templates\main\home.html:241
+#: .\templates\main\home.html:259
+msgid "search services"
+msgstr "tafuta huduma"
+
+#: .\templates\main\home.html:237
+msgid "Are you ready to get the real you back?"
+msgstr "Je! Uko tayari kurudisha uhalisia wako?"
+
+#: .\templates\main\home.html:238
+msgid ""
+"We will help you to find where you can go for treatment and other essential "
+"services"
+msgstr "We will help you find out where you can go for treatment and other essential services"
+
+#: .\templates\main\home.html:255
+msgid "Addiction affects all communities"
+msgstr "Uraibu huathiri jamii zote"
+
+#: .\templates\main\home.html:256
+msgid ""
+"Making the decision to find a detox center or drug or alcohol rehab is the "
+"first step toward a new, healthy life."
+msgstr "Kufanya uamuzi wa kupata kituo cha detox au rehab ya madawa ya kulevya au pombe ni hatua ya kwanza kuelekea maisha mapya, yenye afya"
+
+#: .\templates\main\home.html:274
+msgid "Our Popular Posts"
+msgstr "Machapisho Yetu Maarufu"
+
+#: .\templates\main\home.html:276
+msgid "All Posts"
+msgstr "Machapisho Yote"
+
+#: .\templates\main\home.html:303
+msgid "By"
+msgstr "Na"
+
+#: .\templates\main\home.html:345
+msgid "Testimony"
+msgstr "Ushuhuda"
+
+#: .\templates\main\home.html:347
+msgid "View All"
+msgstr "Tazama zote"
+
+#: .\templates\main\home.html:394 .\templates\main\testimony.html:64
+msgid "No Testimony"
+msgstr "Hakuna Ushuhuda"
+
+#: .\templates\main\home.html:415
+msgid "Available Services"
+msgstr "Huduma Zinazopatikana"
+
+#: .\templates\main\home.html:425
+msgid "Total Articals"
+msgstr "Jumla ya Nakala"
+
+#: .\templates\main\services.html:16
+msgid "Services"
+msgstr "Huduma"
+
+#: .\templates\main\services.html:31
+msgid "Facility"
+msgstr "Kituo"
+
+#: .\templates\main\services.html:32
+msgid "Facility-Type"
+msgstr "Aina ya Kituo"
+
+#: .\templates\main\services.html:33
+msgid "Service"
+msgstr "Huduma"
+
+#: .\templates\main\services.html:34
+msgid "Contact"
+msgstr "Mawasiliano"
+
+#: .\templates\main\services.html:35
+msgid "Location"
+msgstr "Mahali"
+
+#: .\templates\main\services.html:54
+msgid "No Service"
+msgstr "Hakuna Huduma"
+
+#: .\templates\main\testimony.html:14
+msgid "testimony"
+msgstr "ushuhuda"
+
+#: .\templates\main\testimony.html:16
+msgid "People Testimony"
+msgstr "Ushuhuda wa Watu"

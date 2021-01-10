@@ -161,22 +161,21 @@
 .theme-cyan .profile-page .profile-sub-header .box-list ul li a:hover,
 .theme-cyan .menu>ul>li>ul.normal-sub>li a:hover,
 .theme-cyan .menu>ul>li>ul>li>ul>li a:hover {
-    background-color: #00bcd4
+    background-color: #417690
 }
 
 .theme-cyan .navbar-brand {
-    color: #00bcd4 !important
+    color: #417690 !important
 }
 
 .theme-cyan .navbar-brand:hover,
 .theme-cyan .navbar-brand:active,
 .theme-cyan .navbar-brand:focus {
-    color: #00bcd4
+    color: #417690
 }
 
 .theme-cyan .navbar {
-    background: linear-gradient(45deg, #49cdd0, #00bcd4)
-        /* daniel */
+    background: linear-gradient(45deg, #417690, #417690)
 }
 
 .theme-cyan .nav>li>a {
@@ -207,24 +206,24 @@
 
 .theme-cyan .sidebar .menu .list li.active>:first-child i,
 .theme-cyan .sidebar .menu .list li.active>:first-child span {
-    color: #00bcd4
+    color: #417690
 }
 
 .theme-cyan .sidebar .menu .list a:hover {
-    color: #00bcd4
+    color: #417690
 }
 
 .theme-cyan .checkbox input[type="checkbox"]:checked+label::after {
-    border: 1px solid #00bcd4
+    border: 1px solid #417690
 }
 
 .theme-cyan .inbox-widget .inbox-inner:hover .inbox-img img {
-    border: 2px solid #00bcd4;
+    border: 2px solid #417690;
     transition: all 150ms linear
 }
 
 .theme-cyan .nav-tabs .nav-link.active {
-    border: 1px solid #00bcd4 !important
+    border: 1px solid #417690 !important
 }
 
 .theme-cyan .card .header h2:before {
@@ -236,7 +235,7 @@
 }
 
 .theme-cyan .blog-page .single-blog-post .img-holder .date-box {
-    background-color: #00bcd4
+    background-color: #417690
 }
 
 .theme-green .profile-page .profile-sub-header .box-list ul li a:hover,

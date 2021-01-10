@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!-- Start Footer Area -->
 <footer class="footer-area" style="padding: 0px;">
     <div class="footer-bottom-area">
@@ -7,8 +8,7 @@
                 <a href="javascript:void(0);" class="d-inline-block"><img src="{% static 'assets/img/new_huru_logo.jpg' %}"
                         alt="image"></a>
             </div>
-            <p>Copyright <i class='bx bx-copyright'></i> 2020 Huru all rights
-                reserved.
+            <p>{% trans 'Copyright' %} <i class='bx bx-copyright'></i>{% now 'Y' %} {% trans 'Huru all rights reserved.' %}
             </p>
         </div>
     </div>
