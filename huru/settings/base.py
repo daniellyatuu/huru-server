@@ -104,7 +104,7 @@ LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = [
     ('en', 'English'),
-    ('sw', 'Swahili'),
+    ('sw', 'Kiswahili'),
 ]
 
 # LANGUAGES = [
