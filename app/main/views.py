@@ -14,7 +14,7 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
 
         x = get_language()
-        print(x)
+        print('language used is = ', x)
 
         context = {}
         context['title'] = 'Huru'
