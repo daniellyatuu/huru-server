@@ -2,6 +2,8 @@
 {% load static %}
 {% load date_tag %}
 {% block content %}
+{% load embed_video_tags %}
+
 
 <!-- Start Blog Details Area -->
 <section class="blog-details-area">
@@ -11,8 +13,8 @@
             
             <div class="col-lg-8 col-md-12">
                 <div class="blog-details-desc">
-                    <div class="article-image">
-                        <img src="/media/{{object.cover_photo}}" alt="image">
+                    <div style="height: 400px; width: 100%;">
+                        {% video object.url '100% x 100%' %}
                     </div>
 
                     <div class="article-content">
