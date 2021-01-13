@@ -8,6 +8,7 @@
 {% url 'main:blog' as blog %}
 {% url 'main:category_information' as category_information %}
 {% url 'main:service_list' as service_list %}
+{% url 'main:blog_detail' object.id as blog_detail %}
 
 
 <!-- Start Header Area -->
@@ -53,7 +54,7 @@
                                     class="nav-link {% if request.path == home %}active{% endif %}">{% trans 'Home' %}</a></li>
 
                             <li class="nav-item"><a href="{% url 'main:blog' %}"
-                                    class="nav-link {% if request.path == blog %}active{% endif %}">{% trans 'Information' %}</a></li>
+                                    class="nav-link {% if request.path == blog or request.path == blog_detail %}active{% endif %}">{% trans 'Information' %}</a></li>
 
                             <li class="nav-item"><a href="{% url 'main:testimony' %}"
                                     class="nav-link {% if request.path == testimony %}active{% endif %}">{% trans 'Testimonies' %}</a>

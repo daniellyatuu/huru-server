@@ -33,10 +33,10 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-post mb-30">
                             <div class="post-image">
-                                <a href="single-blog.html" class="d-block">
+                                <a href="{% url 'main:blog_detail' post.id %}" class="d-block">
                                     <img src="/media/{{post.cover_photo}}" alt="image">
                                 </a>
-
+                                
                                 {% if post.category %}
                                 <div class="tag">
                                     <a href="{% url 'main:category_information' post.category_id %}">{{post.category}}</a>
@@ -51,7 +51,7 @@
                                     </li>
                                     <li><a href="#">{{post.date_posted}}</a></li>
                                 </ul>
-                                <h3><a href="single-blog.html" class="d-inline-block">{{post.title}}</a></h3>
+                                <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
                                 <p>
                                     {% if post.content|length > 500 %}
 
@@ -64,7 +64,7 @@
                                     {% endif %}
                                 </p>
                                 {% if post.content|length > 500 %}
-                                <a href="#" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                                <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                                 {% endif %}
                             </div>
                         </div>

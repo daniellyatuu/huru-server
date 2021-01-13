@@ -38,7 +38,7 @@
                                 Date posted: <a href="javascript:void(0);" class="d-inline-block">{{obj.date_posted}}</a>
                             </li>
                         </ul>
-                        <h3><a href="single-blog.html" class="d-inline-block">{{obj.title}}</a></h3>
+                        <h3><a href="{% url 'main:testimony_detail' obj.id %}" class="d-inline-block">{{obj.title}}</a></h3>
                         <p>
                             {% if obj.content|length > 300 %}
 
@@ -51,7 +51,7 @@
                             {% endif %}
                         </p>
                         {% if obj.content|length > 300 %}
-                        <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        <a href="{% url 'main:testimony_detail' obj.id %}" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                         {% endif %}
                         
                     </div>

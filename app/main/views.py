@@ -80,3 +80,7 @@ class ServiceView(View):
         context['title'] = 'Services'
         context['services'] = Service.objects.all()
         return render(request, self.template_name, context)
+
+
+class TestimonyDetailView(DetailView):
+    model = Testimony
