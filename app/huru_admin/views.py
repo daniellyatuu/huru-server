@@ -84,11 +84,11 @@ class AddArticle(generic.CreateView):
             name_path = 'cover_photo/'+image_new_name
             namepath = 'media/'+name_path
 
-            return HttpResponse('here please')
-
             img.save(namepath, img.format, quality=70)
 
             img.close()
+
+            return HttpResponse('here please NEW')
 
             # save user data
             self.object.cover_photo = name_path
