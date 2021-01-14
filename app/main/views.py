@@ -6,6 +6,7 @@ from django.views.generic.detail import DetailView
 from django.utils.translation import gettext as _
 from django.utils import translation
 from django.utils.translation import get_language
+from django.db.models import Q
 
 
 class HomeView(View):
@@ -21,7 +22,22 @@ class HomeView(View):
         # context['hello'] = _('hello')
         context['posts'] = Article.objects.filter(
             active=True, belong_to__name='pwud')
+        context['service_number'] = Service.objects.all().count()
         context['testimonies'] = Testimony.objects.all()
+        return render(request, self.template_name, context)
+
+
+class HCWHomeView(View):
+    template_name = 'main/hcw_home.html'
+
+    def get(self, request, *args, **kwargs):
+
+        context = {}
+        context['title'] = 'Huru'
+        context['posts'] = Article.objects.filter(
+            active=True, belong_to__name='hcw')
+        # context['service_number'] = Service.objects.all().count()
+        # context['testimonies'] = Testimony.objects.all()
         return render(request, self.template_name, context)
 
 
@@ -76,9 +92,19 @@ class ServiceView(View):
     template_name = 'main/services.html'
 
     def get(self, request, *args, **kwargs):
+
+        # filter by keyword
+        print('in here please')
+        keyword = self.request.GET.get('keyword', '')
+        print(keyword)
+        queryset = Service.objects.all()
+        if keyword:
+            queryset = queryset.filter(Q(facility__icontains=keyword) | Q(
+                facility_type__icontains=keyword))
+
         context = {}
         context['title'] = 'Services'
-        context['services'] = Service.objects.all()
+        context['services'] = queryset
         return render(request, self.template_name, context)
 
 

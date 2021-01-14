@@ -23,13 +23,15 @@
 <section class="pricing-area ptb-100">
     <div class="container">
 
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search service">
-            <div class="input-group-append">
-              <button class="input-group-text">search</button>
+        <form action="" method="GET">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="keyword" value="{{request.GET.keyword}}" placeholder="Search facility or facility type">
+                <div class="input-group-append">
+                <button class="input-group-text">search</button>
+                </div>
             </div>
-          </div>
-        
+        </form>
+
         {% if services.count != 0 %}
         <div class="pricing-table table-responsive">
             <table class="table">

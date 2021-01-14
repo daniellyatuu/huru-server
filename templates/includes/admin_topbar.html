@@ -18,6 +18,12 @@
                 <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen"
                     data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
             </li> -->
+            {% if user.superuser == True %}
+            <li>
+                <a href="{% url 'admin:index'  %}" target="_blank" class="fullscreen hidden-sm-down" data-provide="fullscreen"
+                    data-close="true">Super-admin dashboard</a>
+            </li>
+            {% endif %}
             <li><a href="{% url 'user:logout'  %}" class="mega-menu" data-close="true"><i
                         class="zmdi zmdi-power"></i></a></li>
         </ul>
