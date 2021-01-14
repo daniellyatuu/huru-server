@@ -81,10 +81,10 @@ class AddArticle(generic.CreateView):
             # generate image_new name ./end
             ################################
 
-            return HttpResponse('here please')
-
             name_path = 'cover_photo/'+image_new_name
             namepath = 'media/'+name_path
+
+            return HttpResponse('here please')
 
             img.save(namepath, img.format, quality=70)
 
