@@ -7419,7 +7419,7 @@ Mission CSS
 .mission-area {
   position: relative;
   z-index: 1;
-  background-image: url(../img/mission-bg.jpg);
+  background-image: url(../img/huru-mission-bg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

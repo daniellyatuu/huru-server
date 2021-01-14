@@ -134,88 +134,13 @@
 </section>
 <!-- End Posts Area -->
 
-<!-- testimony .start -->
-<section class="blog-area pb-70">
-    <div class="container">
-        
-        <div class="section-title text-left">
-            <h2>{% trans 'Testimony' %}</h2>
-            {% if testimonies.count >= 10 %}
-            <a href="blog-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span
-                    class="label">{% trans 'View All' %}</span><i class='bx bx-show-alt icon-arrow after'></i></a>
-            {% endif %}
-        </div>
-            
-        {% if testimonies.count != 0 %}
-
-        <div class="shorting">
-            <div class="row">
-
-                {% for obj in testimonies %}
-                <!-- testimony .start -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div style="height: 200px; width: 100%;">
-                            {% video obj.url '100% x 100%' %}
-                        </div>
-
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                <li class="post-author">
-                                    Date posted: <a href="javascript:void(0);" class="d-inline-block">{{obj.date_posted}}</a>
-                                </li>
-                            </ul>
-                            <h3><a href="{% url 'main:testimony_detail' obj.id %}" class="d-inline-block">{{obj.title}}</a></h3>
-                            <p>
-                                {% if obj.content|length > 300 %}
-
-                                {{obj.content|safe|slice:300}} ...
-
-                                {% else %}
-
-                                {{obj.content|safe}}
-
-                                {% endif %}
-                            </p>
-                            {% if obj.content|length > 300 %}
-                            <a href="{% url 'main:testimony_detail' obj.id %}" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- testimony .end -->
-                {% endfor %}
-
-            </div>
-        </div>
-        {% else %}
-        <h5 class="text-center card" style="padding: 10px;">{% trans 'No Testimony' %}</h5>
-        {% endif %}
-
-    </div>
-</section>
-<!-- testimony ./end -->
-
-    
-    
-
 <!-- Start Funfacts Area -->
 <section class="funfacts-area">
     <div class="container">
         <div class="funfacts-inner">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-6">
-                    <div class="single-funfact">
-                        <div class="icon">
-                            <i class='bx bxs-building-house'></i>
-                        </div>
-                        <h3 class="odometer" data-count="{{service_number}}">00</h3>
-                        <p>{% trans 'Available Services' %}</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-6">
+               
+                <div class="col-lg-12 col-md-12 col-12">
                     <div class="single-funfact">
                         <div class="icon">
                             <i class='bx bx-book-reader'></i>
@@ -224,20 +149,6 @@
                         <p>{% trans 'Total Articals' %}</p>
                     </div>
                 </div>
-
-                
-                {% comment %}
-                <div class="col-lg-4 col-md-4 col-6">
-                    <div class="single-funfact">
-                        <div class="icon">
-                            <i class='bx bx-user-pin'></i>
-                        </div>
-                        <h3 class="odometer" data-count="8190">00</h3>
-                        <p>Happy Customers</p>
-                    </div>
-                </div>
-                {% endcomment %}
-                    
 
             </div>
 
