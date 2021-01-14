@@ -141,3 +141,5 @@ LOGOUT_REDIRECT_URL = 'user:login'
 LOCALE_PATHS = [
     BASE_DIR, 'locale'
 ]
+
+print(MEDIA_ROOT)
