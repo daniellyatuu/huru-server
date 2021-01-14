@@ -81,8 +81,8 @@ class AddArticle(generic.CreateView):
             # generate image_new name ./end
             ################################
 
-            name_path = 'cover_photo/'+image_new_name
-            namepath = 'media/'+name_path
+            name_path = os.path.join("cover_photo", image_new_name)
+            namepath = os.path.join("media", name_path)
 
             img.save(namepath, img.format, quality=70)
 
