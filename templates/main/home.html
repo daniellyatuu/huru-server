@@ -64,9 +64,16 @@
 <!-- End Main Banner -->
 
 <!-- Start Blog Area -->
-<section class="blog-area ptb-100">
+<section class="blog-area pt-70 pb-70">
     <div class="container">
         <div class="row">
+
+            <div class="section-title text-left">
+                <h2>{% trans 'Our Popular Posts' %}</h2>
+                {% if posts.count >= 10 %}
+                <a href="" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{% trans 'All Posts' %}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                {% endif %}
+            </div>
 
             {% if posts.count != 0 %}
             <div class="shorting">
@@ -107,9 +114,9 @@
 
                                     {% endif %}
                                 </p>
-                                {% if post.content|length > 500 %}
+                                <!-- {% if post.content|length > 500 %}
                                 <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
-                                {% endif %}
+                                {% endif %} -->
                             </div>
                         </div>
                     </div>
