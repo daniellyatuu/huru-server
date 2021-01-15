@@ -38,9 +38,6 @@ class ArticleView(View):
         return super().dispatch(*args, **kwargs)
 
     def get(self, request, *args, **kwargs):
-
-        # test
-
         context = {}
         context['title'] = 'Article'
         context['page_title'] = 'article'
