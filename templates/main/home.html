@@ -114,9 +114,13 @@
 
                                     {% endif %}
                                 </p>
-                                <!-- {% if post.content|length > 500 %}
-                                <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
-                                {% endif %} -->
+                                
+                                {% comment %}
+                                    {% if post.content|length > 500 %}
+                                    <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                                    {% endif %}
+                                {% endcomment %}
+                                    
                             </div>
                         </div>
                     </div>
