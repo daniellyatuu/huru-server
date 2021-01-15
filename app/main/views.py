@@ -5,7 +5,7 @@ from app.main.models import Article, Category, Testimony, Service
 from django.views.generic.detail import DetailView
 from django.utils.translation import gettext as _
 from django.utils import translation
-# from django.utils.translation import get_language
+from django.utils.translation import get_language
 from django.db.models import Q
 
 
