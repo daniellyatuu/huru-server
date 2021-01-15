@@ -68,12 +68,12 @@ class Article(models.Model):
 
         new_filename = new_name+ext
 
-        #  resize cover photo height to be 600px
-        im = resizeimage.resize_height(im, 600)
+        # #  resize cover photo height to be 600px
+        # im = resizeimage.resize_height(im, 600)
 
-        # max_width = 720
-        # if im.size[0] > max_width:
-        #     im = resizeimage.resize_width(im, max_width)
+        max_width = 600
+        if im.size[0] > max_width:
+            im = resizeimage.resize_width(im, max_width)
         im_io = BytesIO()
 
         im.save(im_io, 'JPEG', quality=60)
