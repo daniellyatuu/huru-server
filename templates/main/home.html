@@ -81,23 +81,21 @@
                 {% for post in posts %}
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-box mb-30">
-                        
-                        {% comment %}
-                            <div class="courses-image text-center">
-                                <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
-    
-                                <div class="courses-tag">
-                                    <a href="{% url 'main:category_information' post.category_id %}" class="d-block">{{post.category}}</a>
-                                </div>
+                        <div class="courses-image text-center">
+                            <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+
+                            <div class="courses-tag">
+                                <a href="{% url 'main:category_information' post.category_id %}" class="d-block">{{post.category}}</a>
                             </div>
-                        {% endcomment %}
-                            
+                        </div>
 
                         <div class="courses-content">
                             
                             <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
 
                             <div>
+                                
+                                {% comment %}
                                 {% if post.content|length > 300 %}
 
                                 {{post.content|safe|slice:300}} ...
@@ -107,10 +105,12 @@
                                 {{post.content|safe}}
 
                                 {% endif %}
+                                {% endcomment %}
+                                    
 
                                 {% if post.content|length > 300 %}
-                                <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
-                                {% endif %}
+                            <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                            {% endif %}
                             </div>
                         </div>
 
