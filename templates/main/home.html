@@ -89,36 +89,48 @@
                             </div>
                         </div>
 
-                        <div class="post-content">
-                            <h3><a href="single-blog.html" class="d-inline-block">{{post.title}}</a></h3>
-                            <p>
-                                {% if post.content|length > 300 %}
-                
-                                {{post.content|safe|slice:300}} ...
-                
-                                {% else %}
-                
-                                {{post.content|safe}}
-                
-                                {% endif %}
-                            </p>
-                            {% if post.content|length > 300 %}
-                            <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
-                            {% endif %}
+                        <div class="courses-content">
+                            <div class="course-author d-flex align-items-center">
+                                {% trans 'By' %}: <a href="#" class="d-inline-block">{{post.user.group}}</a>
+                            </div>
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    {% trans 'By' %}: <a href="#" class="d-inline-block">{{post.user.group}}</a>
+                                </li>
+                                <li><a href="#">{{post.date_posted}}</a></li>
+                            </ul>
+
+                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
+
+                            <div class="courses-rating">
+                                <div class="review-stars-rated">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+
+                                <div class="rating-total">
+                                    5.0 (1 rating)
+                                </div>
+                            </div>
                         </div>
 
                         <div class="courses-box-footer">
                             <ul>
-                                <li class="">
-                                    <i class='bx bx-book-open'></i> {{post.date_posted}}
+                                <li class="students-number">
+                                    <i class='bx bx-user'></i> 10 students
                                 </li>
 
-                                <li class="">
-                                    {% trans 'By' %}: <a href="#" class="d-inline-block">{{post.user.group}}</a>
+                                <li class="courses-lesson">
+                                    <i class='bx bx-book-open'></i> 6 lessons
+                                </li>
+
+                                <li class="courses-price">
+                                    Free
                                 </li>
                             </ul>
-
-
                         </div>
                     </div>
                 </div>
