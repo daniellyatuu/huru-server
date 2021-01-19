@@ -111,7 +111,7 @@ LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = [
     ('en', _('English')),
-    ('sw', _('Kiswahili')),
+    ('sw-TZ', _('Kiswahili')),
 ]
 
 TIME_ZONE = 'UTC'
