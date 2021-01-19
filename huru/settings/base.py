@@ -111,7 +111,7 @@ LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = [
     ('en', _('English')),
-    ('sw-TZ', _('Kiswahili')),
+    ('sw', _('Kiswahili')),
 ]
 
 TIME_ZONE = 'UTC'
@@ -141,5 +141,3 @@ LOGOUT_REDIRECT_URL = 'user:login'
 LOCALE_PATHS = [
     BASE_DIR, 'locale'
 ]
-
-print(MEDIA_ROOT)
