@@ -139,5 +139,8 @@ LOGIN_REDIRECT_URL = 'huru_admin:home'
 LOGOUT_REDIRECT_URL = 'user:login'
 
 LOCALE_PATHS = [
-    BASE_DIR, 'locale'
+    BASE_DIR / 'locale'
 ]
+
+print(LOCALE_PATHS)
+print(STATICFILES_DIRS)
