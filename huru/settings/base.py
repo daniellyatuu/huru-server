@@ -102,16 +102,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-# LANGUAGE_CODE = 'sw'
-
-# LANGUAGES = [
-#     ('en', 'English'),
-#     ('sw', 'Kiswahili'),
-# ]
 
 LANGUAGES = [
     ('en', _('English')),
-    ('sw', _('Kiswahili')),
+    ('sw', _('Swahili')),
 ]
 
 TIME_ZONE = 'UTC'
@@ -139,7 +133,5 @@ LOGIN_REDIRECT_URL = 'huru_admin:home'
 LOGOUT_REDIRECT_URL = 'user:login'
 
 LOCALE_PATHS = [
-    BASE_DIR, 'locale'
+    BASE_DIR / 'locale'
 ]
-
-print(MEDIA_ROOT)

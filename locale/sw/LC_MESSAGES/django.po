@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 11:56+0300\n"
+"POT-Creation-Date: 2021-01-19 16:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\includes\footer_text.html:11
+#: .\huru\settings\base.py:113
+msgid "English"
+msgstr "kiingereza"
+
+#: .\huru\settings\base.py:114
+msgid "Swahili"
+msgstr "Kiswahili"
+
+#: .\templates\includes\footer_text.html:12
 msgid "Copyright"
 msgstr "Hakimiliki"
 
-#: .\templates\includes\footer_text.html:11
+#: .\templates\includes\footer_text.html:12
 msgid "Huru all rights reserved."
 msgstr "Huru haki zote zimehifadhiwa."
 
-#: .\templates\includes\menu.html:53 .\templates\includes\menu.html:140
+#: .\templates\includes\menu.html:56 .\templates\includes\menu.html:143
 #: .\templates\main\about_us.html:13 .\templates\main\blog.html:12
 #: .\templates\main\services.html:13 .\templates\main\testimony.html:13
 msgid "Home"
 msgstr "Nyumbani"
 
-#: .\templates\includes\menu.html:56 .\templates\includes\menu.html:143
+#: .\templates\includes\menu.html:59 .\templates\includes\menu.html:146
 #: .\templates\main\blog.html:13
 msgid "Information"
 msgstr "Habari"
 
-#: .\templates\includes\menu.html:59 .\templates\includes\menu.html:146
+#: .\templates\includes\menu.html:62 .\templates\includes\menu.html:149
 msgid "Testimonies"
 msgstr "Ushuhuda"
 
-#: .\templates\includes\menu.html:61 .\templates\includes\menu.html:148
+#: .\templates\includes\menu.html:64 .\templates\includes\menu.html:151
 #: .\templates\main\services.html:14
 msgid "Find Services"
 msgstr "Pata Huduma"
 
-#: .\templates\includes\menu.html:63 .\templates\includes\menu.html:150
+#: .\templates\includes\menu.html:66 .\templates\includes\menu.html:153
 #: .\templates\main\about_us.html:16
 msgid "About Us"
 msgstr "Kuhusu sisi"
@@ -59,146 +67,206 @@ msgstr "Kuhusu"
 msgid "WHO ARE WE?"
 msgstr "SISI NI NANI?"
 
-#: .\templates\main\about_us.html:41
+#: .\templates\main\about_us.html:31
+msgid ""
+"We are team of digital health researchers from Muhimbili University of "
+"Health and Allied Sciences, Ministry of Health Tanzania working together "
+"with Casa famiglia rosseta Italy. We have developed this application to "
+"increase information access for people with drug use disorders and their "
+"care takers as well as the healthcare workers. This is to ensure that people "
+"with drug use disorders get the best evidence-based services and health care "
+"workers have access to information on how to best to care and treat their "
+"patients."
+msgstr ""
+"Sisi ni timu ya watafiti wa afya ya dijiti kutoka Chuo Kikuu cha Afya na "
+"Sayansi Shirikishi ya Muhimbili, Wizara ya Afya Tanzania inayofanya kazi "
+"pamoja na Casa famiglia rosseta Italia. Tumeanzisha programu tumizi hii ili "
+"kuongeza ufikiaji wa habari kwa watu walio na shida ya utumiaji wa dawa za "
+"kulevya na wachukua huduma zao na pia wafanyikazi wa huduma ya afya. Hii ni "
+"kuhakikisha kuwa watu walio na shida ya utumiaji wa dawa za kulevya wanapata "
+"huduma bora za msingi wa ushahidi na wafanyikazi wa huduma ya afya wanapata "
+"habari juu ya jinsi ya kuwajali na kuwatibu wagonjwa wao."
+
+#: .\templates\main\about_us.html:35
 msgid ""
 "Huru App is a referral service that provides information about addiction "
 "treatment practitioners and facilities."
-msgstr "Huru App ni huduma ya rufaa ambayo hutoa habari kuhusu watendaji wa matibabu na madawa ya kulevya."
+msgstr ""
+"Huru App ni huduma ya rufaa ambayo hutoa habari kuhusu watendaji wa matibabu "
+"na madawa ya kulevya."
 
-#: .\templates\main\about_us.html:45
+#: .\templates\main\about_us.html:39
 msgid ""
 "Huru App is not a medical provider or treatment facility and does not "
 "provide medical advice."
-msgstr "Huru App sio mtoa huduma ya matibabu au kituo cha matibabu na haitoi ushauri wa matibabu."
+msgstr ""
+"Huru App sio mtoa huduma ya matibabu au kituo cha matibabu na haitoi ushauri "
+"wa matibabu."
 
-#: .\templates\main\about_us.html:54
+#: .\templates\main\about_us.html:43
+msgid ""
+"Huru App does not endorse any treatment facility or guarantee the quality of "
+"care provided, or the results to be achieved, by any treatment facility."
+msgstr ""
+"Huru App haidhinishi kituo chochote cha matibabu au kuhakikisha ubora wa "
+"huduma inayotolewa, au matokeo yatakayopatikana, na kituo chochote cha "
+"matibabu."
+
+#: .\templates\main\about_us.html:47
 msgid ""
 "The information provided by Huru App is not a substitute for professional "
 "treatment advice."
-msgstr "Habari iliyotolewa na Huru App sio mbadala wa ushauri wa matibabu ya kitaalam."
+msgstr ""
+"Habari iliyotolewa na Huru App sio mbadala wa ushauri wa matibabu ya "
+"kitaalam."
 
-#: .\templates\main\about_us.html:82
+#: .\templates\main\about_us.html:75
 msgid "Mission"
 msgstr "Utume"
 
-#: .\templates\main\about_us.html:84
+#: .\templates\main\about_us.html:77
 msgid ""
 "To create a happy community where people are free from addiction and engage "
 "in productive activities"
-msgstr "Kuunda jamii yenye furaha ambapo watu wako huru kutoka kwa uraibu na wanafanya shughuli za uzalishaji"
+msgstr ""
+"Kuunda jamii yenye furaha ambapo watu wako huru kutoka kwa uraibu na "
+"wanafanya shughuli za uzalishaji"
 
-#: .\templates\main\about_us.html:87
+#: .\templates\main\about_us.html:80
 msgid "Vission"
 msgstr "Maono"
+
+#: .\templates\main\about_us.html:82
+msgid ""
+"To ensure access of information and services that facilitate recovery of "
+"people from substance use disorder and build a healthy community which is "
+"free from drug addiction"
+msgstr ""
+"Kuhakikisha upatikanaji wa habari na huduma zinazowezesha kupona kwa watu "
+"kutoka shida ya utumiaji wa dawa na kujenga jamii yenye afya ambayo haina "
+"utumiaji wa dawa za kulevya"
 
 #: .\templates\main\blog.html:15
 msgid "Posts"
 msgstr "Machapisho"
 
-#: .\templates\main\blog.html:67 .\templates\main\home.html:320
-msgid "Read More"
-msgstr "Soma zaidi"
-
-#: .\templates\main\blog.html:80 .\templates\main\home.html:332
-msgid "No Post"
-msgstr "Hakuna Chapisho"
-
-#: .\templates\main\home.html:218 .\templates\main\home.html:236
-#: .\templates\main\home.html:254
-msgid "You are not alone"
-msgstr "Hauko peke yako"
-
-#: .\templates\main\home.html:219
-msgid "Recovery is Possible"
-msgstr "Kupona kunawezekana"
-
-#: .\templates\main\home.html:220
-msgid ""
-"You can stop using drugs, you just have to make the decision to do so today."
-msgstr "Unaweza kuacha kutumia dawa za kulevya, lazima ufanye uamuzi wa kufanya hivyo leo."
-
-#: .\templates\main\home.html:223 .\templates\main\home.html:241
-#: .\templates\main\home.html:259
-msgid "search services"
-msgstr "tafuta huduma"
-
-#: .\templates\main\home.html:237
-msgid "Are you ready to get the real you back?"
-msgstr "Je! Uko tayari kurudisha uhalisia wako?"
-
-#: .\templates\main\home.html:238
-msgid ""
-"We will help you to find where you can go for treatment and other essential "
-"services"
-msgstr "We will help you find out where you can go for treatment and other essential services"
-
-#: .\templates\main\home.html:255
-msgid "Addiction affects all communities"
-msgstr "Uraibu huathiri jamii zote"
-
-#: .\templates\main\home.html:256
-msgid ""
-"Making the decision to find a detox center or drug or alcohol rehab is the "
-"first step toward a new, healthy life."
-msgstr "Kufanya uamuzi wa kupata kituo cha detox au rehab ya madawa ya kulevya au pombe ni hatua ya kwanza kuelekea maisha mapya, yenye afya"
-
-#: .\templates\main\home.html:274
+#: .\templates\main\blog.html:27 .\templates\main\hcw_home.html:71
+#: .\templates\main\home.html:71
 msgid "Our Popular Posts"
 msgstr "Machapisho Yetu Maarufu"
 
-#: .\templates\main\home.html:276
+#: .\templates\main\blog.html:29 .\templates\main\hcw_home.html:73
+#: .\templates\main\home.html:73
 msgid "All Posts"
 msgstr "Machapisho Yote"
 
-#: .\templates\main\home.html:303
+#: .\templates\main\blog.html:69 .\templates\main\category_detail.html:60
+#: .\templates\main\hcw_home.html:117 .\templates\main\home.html:113
+msgid "Read More"
+msgstr "Soma zaidi"
+
+#: .\templates\main\blog.html:77 .\templates\main\category_detail.html:68
+#: .\templates\main\hcw_home.html:100 .\templates\main\home.html:121
 msgid "By"
 msgstr "Na"
 
-#: .\templates\main\home.html:345
+#: .\templates\main\blog.html:94 .\templates\main\hcw_home.html:129
+#: .\templates\main\home.html:138
+msgid "No Post"
+msgstr "Hakuna Chapisho"
+
+#: .\templates\main\hcw_home.html:15 .\templates\main\hcw_home.html:33
+#: .\templates\main\hcw_home.html:51 .\templates\main\home.html:15
+#: .\templates\main\home.html:33 .\templates\main\home.html:51
+msgid "You are not alone"
+msgstr "Hauko peke yako"
+
+#: .\templates\main\hcw_home.html:16 .\templates\main\home.html:16
+msgid "Recovery is Possible"
+msgstr "Kupona kunawezekana"
+
+#: .\templates\main\hcw_home.html:17 .\templates\main\home.html:17
+msgid ""
+"You can stop using drugs, you just have to make the decision to do so today."
+msgstr ""
+"Unaweza kuacha kutumia dawa za kulevya, lazima ufanye uamuzi wa kufanya "
+"hivyo leo."
+
+#: .\templates\main\hcw_home.html:20 .\templates\main\hcw_home.html:38
+#: .\templates\main\hcw_home.html:56 .\templates\main\home.html:20
+#: .\templates\main\home.html:38 .\templates\main\home.html:56
+msgid "search services"
+msgstr "tafuta huduma"
+
+#: .\templates\main\hcw_home.html:34 .\templates\main\home.html:34
+msgid "Are you ready to get the real you back?"
+msgstr "Je! Uko tayari kurudisha uhalisia wako?"
+
+#: .\templates\main\hcw_home.html:35 .\templates\main\home.html:35
+msgid ""
+"We will help you to find where you can go for treatment and other essential "
+"services"
+msgstr ""
+"We will help you find out where you can go for treatment and other essential "
+"services"
+
+#: .\templates\main\hcw_home.html:52 .\templates\main\home.html:52
+msgid "Addiction affects all communities"
+msgstr "Uraibu huathiri jamii zote"
+
+#: .\templates\main\hcw_home.html:53 .\templates\main\home.html:53
+msgid ""
+"Making the decision to find a detox center or drug or alcohol rehab is the "
+"first step toward a new, healthy life."
+msgstr ""
+"Kufanya uamuzi wa kupata kituo cha detox au rehab ya madawa ya kulevya au "
+"pombe ni hatua ya kwanza kuelekea maisha mapya, yenye afya"
+
+#: .\templates\main\hcw_home.html:149 .\templates\main\home.html:238
+msgid "Total Articals"
+msgstr "Jumla ya Nakala"
+
+#: .\templates\main\home.html:151
 msgid "Testimony"
 msgstr "Ushuhuda"
 
-#: .\templates\main\home.html:347
+#: .\templates\main\home.html:154
 msgid "View All"
 msgstr "Tazama zote"
 
-#: .\templates\main\home.html:394 .\templates\main\testimony.html:64
+#: .\templates\main\home.html:207 .\templates\main\testimony.html:69
 msgid "No Testimony"
 msgstr "Hakuna Ushuhuda"
 
-#: .\templates\main\home.html:415
+#: .\templates\main\home.html:228
 msgid "Available Services"
 msgstr "Huduma Zinazopatikana"
-
-#: .\templates\main\home.html:425
-msgid "Total Articals"
-msgstr "Jumla ya Nakala"
 
 #: .\templates\main\services.html:16
 msgid "Services"
 msgstr "Huduma"
 
-#: .\templates\main\services.html:31
+#: .\templates\main\services.html:40
 msgid "Facility"
 msgstr "Kituo"
 
-#: .\templates\main\services.html:32
+#: .\templates\main\services.html:41
 msgid "Facility-Type"
 msgstr "Aina ya Kituo"
 
-#: .\templates\main\services.html:33
+#: .\templates\main\services.html:42
 msgid "Service"
 msgstr "Huduma"
 
-#: .\templates\main\services.html:34
+#: .\templates\main\services.html:43
 msgid "Contact"
 msgstr "Mawasiliano"
 
-#: .\templates\main\services.html:35
+#: .\templates\main\services.html:44
 msgid "Location"
 msgstr "Mahali"
 
-#: .\templates\main\services.html:54
+#: .\templates\main\services.html:63
 msgid "No Service"
 msgstr "Hakuna Huduma"
 

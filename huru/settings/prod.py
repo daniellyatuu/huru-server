@@ -5,8 +5,7 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '3.135.62.33',
-                 'www.huruapp.org', 'huruapp.org']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.huruapp.org', 'huruapp.org']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
