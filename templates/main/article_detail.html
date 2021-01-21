@@ -11,11 +11,15 @@
             
             <div class="col-lg-8 col-md-12">
                 <div class="blog-details-desc">
+                    {% if object.display_cover_photo_on_view_article %}
                     <div class="article-image">
                         <img src="/media/{{object.cover_photo}}" alt="image">
                     </div>
+                    {% endif %}
 
                     <div class="article-content">
+                        
+                        {% if object.display_cover_photo_on_view_article %}
                         <div class="entry-meta">
                             <ul>
                                 <li>
@@ -25,10 +29,11 @@
                                 </li>
                             </ul>
                         </div>
+                        {% endif %}
 
                         <h3>{{object.title}}</h3>
 
-                    <p style="text-align:justify;">{{object.content|safe}}</p>    
+                        <p style="text-align:justify;">{{object.content|safe}}</p>    
                     </div>
                 </div>
             </div>

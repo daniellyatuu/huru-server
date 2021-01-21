@@ -4,7 +4,7 @@ from app.main.models import Article, Category, Testimony, Service
 
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ['title', 'content',
-                    'active', 'belong_to', 'date_posted']
+                    'active', 'belong_to', 'date_posted', 'display_cover_photo_on_view_article']
 
 
 class CategoryAdmin(admin.ModelAdmin):

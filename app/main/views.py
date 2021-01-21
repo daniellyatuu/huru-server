@@ -93,18 +93,24 @@ class HcwBlogView(View):
 
 class BlogDetailView(DetailView):
     model = Article
+    extra_context = {'title': 'Huru article'}
+
 
 class HcwBlogDetailView(DetailView):
     template_name = 'main/hcw_article_detail.html'
     model = Article
+    extra_context = {'title': 'Huru article'}
 
 
 class CategoryDetailView(DetailView):
     model = Category
+    extra_context = {'title': 'Huru category article'}
+
 
 class HcwCategoryDetailView(DetailView):
     template_name = 'main/hcw_category_detail.html'
     model = Category
+    extra_context = {'title': 'Huru category article'}
 
 
 class ServiceView(View):
@@ -129,3 +135,4 @@ class ServiceView(View):
 
 class TestimonyDetailView(DetailView):
     model = Testimony
+    extra_context = {'title': 'Huru testimony'}
