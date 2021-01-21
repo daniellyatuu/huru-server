@@ -1,0 +1,41 @@
+{% extends 'master/hcw_base.html' %}
+{% load static %}
+{% load date_tag %}
+{% block content %}
+
+<!-- Start Blog Details Area -->
+<section class="blog-details-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            
+            <div class="col-lg-8 col-md-12">
+                <div class="blog-details-desc">
+                    <div class="article-image">
+                        <img src="/media/{{object.cover_photo}}" alt="image">
+                    </div>
+
+                    <div class="article-content">
+                        <div class="entry-meta">
+                            <ul>
+                                <li>
+                                    <i class='bx bx-calendar'></i>
+                                    <span>Date published</span>
+                                    <a href="#">{{object.date_posted|dateformat}}</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>{{object.title}}</h3>
+
+                    <p style="text-align:justify;">{{object.content|safe}}</p>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</section>
+<!-- End Blog Details Area -->
+{% endblock %}

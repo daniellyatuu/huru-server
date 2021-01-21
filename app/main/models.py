@@ -26,8 +26,11 @@ class Category(models.Model):
         ordering = ['-id']
         verbose_name_plural = 'categories'
 
-    def article_list(self):
-        return self.category_article.all()
+    def pwud_article_list(self):
+        return self.category_article.filter(belong_to__name ='pwud')
+
+    def hcw_article_list(self):
+        return self.category_article.filter(belong_to__name ='hcw')
 
 
 class Article(models.Model):

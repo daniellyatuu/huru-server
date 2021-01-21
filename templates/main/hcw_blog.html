@@ -1,4 +1,4 @@
-{% extends 'master/base.html' %}
+{% extends 'master/hcw_base.html' %}
 {% load static %}
 {% load i18n %}
 
@@ -10,37 +10,48 @@
         <div class="page-title-content">
             <ul>
                 <li><a href="{% url 'main:home'  %}">{% trans 'Home' %}</a></li>
-                <li>{% trans 'Category - Information' %}</li>
+                <li>{% trans 'Information' %}</li>
             </ul>
-            <h2>{{object}}</h2>
+            <h2>{% trans 'Posts' %}</h2>
         </div>
     </div>
 </div>
 <!-- End Page Title Area -->
+    
 
 <!-- Start Posts Area -->
 <section class="courses-area pt-70 pb-70">
     <div class="container">
+        <div class="section-title text-left">
+            <h2>{% trans 'Our Popular Posts' %}</h2>
+            {% if posts.count >= 10 %}
+            <a href="" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{% trans 'All Posts' %}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+            {% endif %}
+        </div>
         
-        {% if object.pwud_article_list.count != 0 %}
+        {% if posts.count != 0 %}
         <div class="shorting">
             <div class="row">
 
-                {% for post in object.pwud_article_list %}
+                {% for post in posts %}
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-box mb-30">
                         <div class="courses-image text-center">
-                            <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+
+                            <div class="courses-tag">
+                                <a href="{% url 'main:hcw_category_information' post.category_id %}" class="d-block">{{post.category}}</a>
+                            </div>
                         </div>
 
                         <div class="courses-content">
                             
-                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
+                            <h3><a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
 
-                            <div>   
-
+                            <div>
+                                
                                 {% if post.content|length > 300 %}
-                            <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
                             </div>
                         </div>
@@ -48,7 +59,7 @@
                         <div class="courses-box-footer">
                             <ul>
                                 <li class="">
-                                    {% trans 'By' %}: <a href="javascript:void();" class="d-inline-block">{{post.user.group}}</a>
+                                    {% trans 'By' %}: <a href="#" class="d-inline-block">{{post.user.group}}</a>
                                 </li>
 
                                 <li class="">

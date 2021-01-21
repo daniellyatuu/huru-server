@@ -6,8 +6,8 @@ from django.contrib.auth.models import Group
 from django.http import HttpResponse
 from django.contrib import messages
 from django.shortcuts import render
-
 from django.views import View, generic
+from app.user.models import User
 from resizeimage import resizeimage
 from django.urls import reverse
 from PIL import Image
@@ -26,6 +26,8 @@ class Home(View):
         context = {}
         context['title'] = 'Home'
         context['page_title'] = 'Dashboard'
+        context['articles_no'] = Article.objects.all().count()
+        context['users_no'] = User.objects.all().count()
         return render(request, self.template_name, context)
 
 

@@ -80,11 +80,30 @@ class BlogView(View):
         return render(request, self.template_name, context)
 
 
+class HcwBlogView(View):
+    template_name = 'main/hcw_blog.html'
+
+    def get(self, request, *args, **kwargs):
+        context = {}
+        context['title'] = 'Health Care Worker Information'
+        context['posts'] = Article.objects.filter(
+            active=True, belong_to__name='hcw')
+        return render(request, self.template_name, context)
+
+
 class BlogDetailView(DetailView):
+    model = Article
+
+class HcwBlogDetailView(DetailView):
+    template_name = 'main/hcw_article_detail.html'
     model = Article
 
 
 class CategoryDetailView(DetailView):
+    model = Category
+
+class HcwCategoryDetailView(DetailView):
+    template_name = 'main/hcw_category_detail.html'
     model = Category
 
 
