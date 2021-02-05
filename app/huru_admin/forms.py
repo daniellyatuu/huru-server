@@ -7,15 +7,18 @@ class CreateArticle(forms.ModelForm):
     class Meta:
         model = Article
 
-        fields = ['title',  'cover_photo', 'content',
-                  'category', 'belong_to', 'active']
+        fields = ['title', 'sw_title', 'cover_photo', 'content', 'sw_content',
+                  'category', 'belong_to', 'active', 'display_cover_photo_on_view_article']
         widgets = {
             'title': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter title'}),
+            'sw_title': TextInput(attrs={'class': 'form-control', 'placeholder': 'ingiza kichwa cha makala'}),
             'cover_photo': FileInput(attrs={'class': 'form-control', 'placeholder': 'enter cover photo'}),
-            'content': Textarea(attrs={'class': 'form-control no-resize',  'placeholder': 'Please type what you want...', 'rows': 40, 'id': 'summernote', 'style': 'display: none;'}),
+            'content': Textarea(attrs={'class': 'form-control no-resize summernote',  'placeholder': 'Please type what you want...', 'rows': 40, 'style': 'display: none;'}),
+            'sw_content': Textarea(attrs={'class': 'form-control no-resize summernote',  'placeholder': 'Tafadhali andika unachotaka...', 'rows': 40, 'style': 'display: none;'}),
             'belong_to': Select(attrs={'class': 'form-control show-tick'}),
             'category': Select(attrs={'class': 'form-control show-tick'}),
             'active': CheckboxInput(attrs={'id': 'checkbox'}),
+            'display_cover_photo_on_view_article': CheckboxInput(attrs={'id': 'checkbox1'}),
         }
 
 

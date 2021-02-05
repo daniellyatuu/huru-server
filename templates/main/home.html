@@ -5,6 +5,8 @@
 
 {% block content %}
 
+{% get_current_language as LANGUAGE_CODE %}
+
 <!-- Start Main Banner -->
 <section class="home-slides owl-carousel owl-theme">
     <div class="main-banner item-bg1" style="height: 600px;">
@@ -91,23 +93,10 @@
 
                         <div class="courses-content">
                             
-                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
+                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{% if LANGUAGE_CODE == 'sw' %} {{post.sw_title|default_if_none:''}} {% else %} {{post.title}} {% endif %}</a></h3>
 
                             <div>
                                 
-                                {% comment %}
-                                {% if post.content|length > 300 %}
-
-                                {{post.content|safe|slice:300}} ...
-
-                                {% else %}
-
-                                {{post.content|safe}}
-
-                                {% endif %}
-                                {% endcomment %}
-                                    
-
                                 {% if post.content|length > 300 %}
                             <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
@@ -174,20 +163,6 @@
                                 </li>
                             </ul>
                             <h3><a href="{% url 'main:testimony_detail' obj.id %}" class="d-inline-block">{{obj.title}}</a></h3>
-                            
-                            {% comment %}
-                                <p>
-                                    {% if obj.content|length > 300 %}
-    
-                                    {{obj.content|safe|slice:300}} ...
-    
-                                    {% else %}
-    
-                                    {{obj.content|safe}}
-    
-                                    {% endif %}
-                                </p>
-                            {% endcomment %}
                                 
                             {% if obj.content|length > 300 %}
                             <a href="{% url 'main:testimony_detail' obj.id %}" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
@@ -233,7 +208,7 @@
                             <i class='bx bx-book-reader'></i>
                         </div>
                         <h3 class="odometer" data-count="{{posts.count}}">00</h3>
-                        <p>{% trans 'Total Articals' %}</p>
+                        <p>{% trans 'Total Articles' %}</p>
                     </div>
                 </div>
 

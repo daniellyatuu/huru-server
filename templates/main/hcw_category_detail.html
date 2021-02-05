@@ -1,10 +1,8 @@
-{% extends 'master/base.html' %}
+{% extends 'master/hcw_base.html' %}
 {% load static %}
 {% load i18n %}
 
 {% block content %}
-
-{% get_current_language as LANGUAGE_CODE %}
 
 <!-- Start Page Title Area -->
 <div class="page-title-area page-title-style-three item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -24,25 +22,25 @@
 <section class="courses-area pt-70 pb-70">
     <div class="container">
         
-        {% if object.pwud_article_list.count != 0 %}
+        {% if object.hcw_article_list.count != 0 %}
         <div class="shorting">
             <div class="row">
 
-                {% for post in object.pwud_article_list %}
+                {% for post in object.hcw_article_list %}
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-box mb-30">
                         <div class="courses-image text-center">
-                            <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
                         </div>
 
                         <div class="courses-content">
                             
-                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{% if LANGUAGE_CODE == 'sw' %} {{post.sw_title|default_if_none:''}} {% else %} {{post.title}} {% endif %}</a></h3>
+                            <h3><a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
 
                             <div>   
 
                                 {% if post.content|length > 300 %}
-                            <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
                             </div>
                         </div>

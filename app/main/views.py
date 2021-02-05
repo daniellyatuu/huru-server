@@ -80,12 +80,37 @@ class BlogView(View):
         return render(request, self.template_name, context)
 
 
+class HcwBlogView(View):
+    template_name = 'main/hcw_blog.html'
+
+    def get(self, request, *args, **kwargs):
+        context = {}
+        context['title'] = 'Health Care Worker Information'
+        context['posts'] = Article.objects.filter(
+            active=True, belong_to__name='hcw')
+        return render(request, self.template_name, context)
+
+
 class BlogDetailView(DetailView):
     model = Article
+    extra_context = {'title': 'Huru article'}
+
+
+class HcwBlogDetailView(DetailView):
+    template_name = 'main/hcw_article_detail.html'
+    model = Article
+    extra_context = {'title': 'Huru article'}
 
 
 class CategoryDetailView(DetailView):
     model = Category
+    extra_context = {'title': 'Huru category article'}
+
+
+class HcwCategoryDetailView(DetailView):
+    template_name = 'main/hcw_category_detail.html'
+    model = Category
+    extra_context = {'title': 'Huru category article'}
 
 
 class ServiceView(View):
@@ -94,9 +119,7 @@ class ServiceView(View):
     def get(self, request, *args, **kwargs):
 
         # filter by keyword
-        print('in here please')
         keyword = self.request.GET.get('keyword', '')
-        print(keyword)
         queryset = Service.objects.all()
         if keyword:
             queryset = queryset.filter(Q(facility__icontains=keyword) | Q(
@@ -110,3 +133,14 @@ class ServiceView(View):
 
 class TestimonyDetailView(DetailView):
     model = Testimony
+    extra_context = {'title': 'Huru testimony'}
+
+
+class PrivacyPolicy(View):
+    template_name = 'main/privacy_policy.html'
+
+    def get(self, request, *args, **kwargs):
+
+        context = {}
+        context['title'] = 'Privacy policy'
+        return render(request, self.template_name, context)

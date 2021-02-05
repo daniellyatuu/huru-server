@@ -26,16 +26,22 @@ class Category(models.Model):
         ordering = ['-id']
         verbose_name_plural = 'categories'
 
-    def article_list(self):
-        return self.category_article.all()
+    def pwud_article_list(self):
+        return self.category_article.filter(belong_to__name='pwud')
+
+    def hcw_article_list(self):
+        return self.category_article.filter(belong_to__name='hcw')
 
 
 class Article(models.Model):
     user = models.ForeignKey(
         User, related_name='user_article', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
+    sw_title = models.CharField(max_length=100, blank=True, null=True)
     cover_photo = models.ImageField(upload_to='cover_photo')
+    display_cover_photo_on_view_article = models.BooleanField(default=True)
     content = models.TextField()
+    sw_content = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=True)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='category_article', blank=True, null=True)

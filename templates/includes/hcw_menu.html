@@ -1,0 +1,89 @@
+{% load static %}
+{% load i18n %}
+
+{% url 'main:hcw_home' as hcw_home  %}
+{% url 'main:hcw_blog' as hcw_blog %}
+{% url 'main:hcw_blog_detail' object.id as hcw_blog_detail %}
+{% url 'main:hcw_category_information' object.id as hcw_category_information %}
+
+
+<!-- Start Header Area -->
+<header class="header-area p-relative">
+
+    <div class="top-header top-header-style-four"> 
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-md-12" style="padding: 10px;">
+                    <ul class="top-header-login-register">
+                        <li><a href="{% url 'main:home' %}"><i class='bx bx-log-in-circle'></i> {% trans 'Huru for People With Drug Use Disorders' %}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Navbar Area -->
+    <div class="navbar-area navbar-style-three">
+        <div class="raque-responsive-nav">
+            <div class="container">
+                <div class="raque-responsive-menu">
+                    <div class="logo">
+                        <a href="{% url 'main:hcw_home'  %}">
+                            <img src="{% static 'assets/img/new_huru_logo.jpg' %}" style="height: 45px;" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="raque-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="{% url 'main:hcw_home'  %}">
+                        <img src="{% static 'assets/img/new_huru_logo.jpg' %}" style="height: 45px;" alt="logo">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="{% url 'main:hcw_home'  %}"
+                                    class="nav-link {% if request.path == hcw_home %}active{% endif %}">{% trans 'Home' %}</a></li>
+
+                            <li class="nav-item"><a href="{% url 'main:hcw_blog' %}"
+                                    class="nav-link {% if request.path == hcw_blog or request.path == hcw_category_information or request.path == hcw_blog_detail %}active{% endif %}">{% trans 'Information' %}</a></li>
+                        </ul>
+                       
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Start Sticky Navbar Area -->
+    <div class="navbar-area navbar-style-three header-sticky">
+        <div class="raque-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="{% url 'main:hcw_home'  %}">
+                        <img src="{% static 'assets/img/new_huru_logo.jpg' %}" style="height: 45px;" alt="logo">
+                    </a>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="{% url 'main:hcw_home'  %}"
+                                    class="nav-link {% if request.path == hcw_home %}active{% endif %}">{% trans 'Home' %}</a></li>
+
+                            <li class="nav-item"><a href="{% url 'main:hcw_blog' %}"
+                                    class="nav-link {% if request.path == hcw_blog or request.path == hcw_category_information or request.path == hcw_blog_detail %}active{% endif %}">{% trans 'Information' %}</a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Navbar Area -->
+
+</header>
+<!-- End Header Area -->

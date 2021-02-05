@@ -1,11 +1,7 @@
-{% extends 'master/base.html' %}
+{% extends 'master/hcw_base.html' %}
 {% load static %}
 {% load date_tag %}
-{% load i18n %}
-
 {% block content %}
-
-{% get_current_language as LANGUAGE_CODE %}
 
 <!-- Start Blog Details Area -->
 <section class="blog-details-area">
@@ -22,22 +18,21 @@
                     {% endif %}
 
                     <div class="article-content">
-                        
                         {% if object.display_cover_photo_on_view_article %}
                         <div class="entry-meta">
                             <ul>
                                 <li>
                                     <i class='bx bx-calendar'></i>
-                                    <span>{% trans 'Date published' %}</span>
+                                    <span>Date published</span>
                                     <a href="#">{{object.date_posted|dateformat}}</a>
                                 </li>
                             </ul>
                         </div>
                         {% endif %}
 
-                        <h3>{% if LANGUAGE_CODE == 'sw' %} {{object.sw_title|default_if_none:''}} {% else %} {{object.title}} {% endif %}</h3>
+                        <h3>{{object.title}}</h3>
 
-                        <p style="text-align:justify;">{% if LANGUAGE_CODE == 'sw' %} {{object.sw_content|safe}} {% else %} {{object.content|safe}} {% endif %}</p>    
+                    <p style="text-align:justify;">{{object.content|safe}}</p>    
                     </div>
                 </div>
             </div>
