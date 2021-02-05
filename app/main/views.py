@@ -119,9 +119,7 @@ class ServiceView(View):
     def get(self, request, *args, **kwargs):
 
         # filter by keyword
-        print('in here please')
         keyword = self.request.GET.get('keyword', '')
-        print(keyword)
         queryset = Service.objects.all()
         if keyword:
             queryset = queryset.filter(Q(facility__icontains=keyword) | Q(
@@ -136,3 +134,13 @@ class ServiceView(View):
 class TestimonyDetailView(DetailView):
     model = Testimony
     extra_context = {'title': 'Huru testimony'}
+
+
+class PrivacyPolicy(View):
+    template_name = 'main/privacy_policy.html'
+
+    def get(self, request, *args, **kwargs):
+
+        context = {}
+        context['title'] = 'Privacy policy'
+        return render(request, self.template_name, context)

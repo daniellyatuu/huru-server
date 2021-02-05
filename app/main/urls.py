@@ -20,4 +20,5 @@ urlpatterns = [
     path('services/', views.ServiceView.as_view(), name='service_list'),
     path('testimony-detail/<int:pk>/',
          views.TestimonyDetailView.as_view(), name='testimony_detail'),
+    path('privacy-policy/', views.PrivacyPolicy.as_view(), name='privacy_policy'),
 ]

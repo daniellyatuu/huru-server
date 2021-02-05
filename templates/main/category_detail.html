@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% get_current_language as LANGUAGE_CODE %}
+
 <!-- Start Page Title Area -->
 <div class="page-title-area page-title-style-three item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
@@ -35,7 +37,7 @@
 
                         <div class="courses-content">
                             
-                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
+                            <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{% if LANGUAGE_CODE == 'sw' %} {{post.sw_title|default_if_none:''}} {% else %} {{post.title}} {% endif %}</a></h3>
 
                             <div>   
 

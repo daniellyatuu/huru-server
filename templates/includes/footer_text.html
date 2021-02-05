@@ -33,8 +33,7 @@
                     
                     <div class="search-box d-inline-block" style="visibility: hidden;">
                         <i class='bx bx-search'></i>
-                    </div>
-                                        
+                    </div>   
                 </div>
             </div>
 
@@ -44,8 +43,9 @@
                     </a>
             </div>            
             
-            <p>{% trans 'Copyright' %} <i class='bx bx-copyright'></i>{% now 'Y' %} {% trans 'Huru all rights reserved.' %}
+            <p>{% trans 'Copyright' %} <i class='bx bx-copyright'></i>{% now 'Y' %} {% trans 'Huru All Rights Reserved.' %}
             </p>
+            <p><a href="{% url 'main:privacy_policy'  %}" target="_blank">Huruapp Privacy Policy</a></p>
         </div>
     </div>
 </footer>
