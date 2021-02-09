@@ -11,10 +11,10 @@ class CreateArticle(forms.ModelForm):
                   'category', 'belong_to', 'active', 'display_cover_photo_on_view_article']
         widgets = {
             'title': TextInput(attrs={'class': 'form-control', 'placeholder': 'enter title'}),
-            'sw_title': TextInput(attrs={'class': 'form-control', 'placeholder': 'ingiza kichwa cha makala'}),
+            'sw_title': TextInput(attrs={'class': 'form-control', 'placeholder': 'ingiza kichwa cha makala', 'required': 'true'}),
             'cover_photo': FileInput(attrs={'class': 'form-control', 'placeholder': 'enter cover photo'}),
             'content': Textarea(attrs={'class': 'form-control no-resize summernote',  'placeholder': 'Please type what you want...', 'rows': 40, 'style': 'display: none;'}),
-            'sw_content': Textarea(attrs={'class': 'form-control no-resize summernote',  'placeholder': 'Tafadhali andika unachotaka...', 'rows': 40, 'style': 'display: none;'}),
+            'sw_content': Textarea(attrs={'class': 'form-control no-resize summernote',  'placeholder': 'Tafadhali andika unachotaka...', 'rows': 40, 'style': 'display: none;', 'required': 'true'}),
             'belong_to': Select(attrs={'class': 'form-control show-tick'}),
             'category': Select(attrs={'class': 'form-control show-tick'}),
             'active': CheckboxInput(attrs={'id': 'checkbox'}),
