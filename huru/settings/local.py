@@ -3,7 +3,8 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.huruapp.org', 'huruapp.org']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.huruapp.org',
+                 'huruapp.org', '192.168.1.13']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
