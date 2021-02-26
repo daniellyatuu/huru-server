@@ -83,8 +83,8 @@
                 {% for post in posts %}
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-box mb-30">
-                        <div class="courses-image text-center">
-                            <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+                        <div class="courses-image text-center" style="height: 300px; width: 100%; overflow: hidden;">
+                            <a href="{% url 'main:blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" style="height: auto; width: 100%;" alt="image"></a>
 
                             <div class="courses-tag">
                                 <a href="{% url 'main:category_information' post.category_id %}" class="d-block">{{post.category}}</a>
