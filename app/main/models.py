@@ -50,42 +50,6 @@ class Article(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
-    # calling image compression function before saving the data
-    def save(self, *args, **kwargs):
-        new_image = self.compress(self.cover_photo)
-        self.cover_photo = new_image
-        super().save(*args, **kwargs)
-
-    # image compression method
-    def compress(self, filename):
-        im = Image.open(filename)
-
-        im = im.convert('RGB')
-
-        # get filename extension
-        name, ext = os.path.splitext(filename.name)
-
-        ''' new filename '''
-        # current date and time
-        now = datetime.now()
-        timestamp = datetime.timestamp(now)
-        new_name = name + str(timestamp)
-        new_name = new_name.replace('.', '')
-
-        new_filename = new_name+ext
-
-        # #  resize cover photo height to be 600px
-        # im = resizeimage.resize_height(im, 600)
-
-        max_width = 600
-        if im.size[0] > max_width:
-            im = resizeimage.resize_width(im, max_width)
-        im_io = BytesIO()
-
-        im.save(im_io, 'JPEG', quality=60)
-        new_image = File(im_io, name=new_filename)
-        return new_image
-
     class Meta:
         ordering = ['-id']
 
