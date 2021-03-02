@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-21 12:49+0300\n"
+"POT-Creation-Date: 2021-03-02 11:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\huru\settings\base.py:107
+#: .\huru\settings\base.py:108
 msgid "English"
 msgstr "kiingereza"
 
-#: .\huru\settings\base.py:108
+#: .\huru\settings\base.py:109
 msgid "Swahili"
 msgstr "Kiswahili"
 
-#: .\templates\includes\footer_text.html:47
+#: .\templates\includes\footer_text.html:46
 msgid "Copyright"
 msgstr "Hakimiliki"
 
-#: .\templates\includes\footer_text.html:47
-msgid "Huru all rights reserved."
+#: .\templates\includes\footer_text.html:46
+#, fuzzy
+#| msgid "Huru all rights reserved."
+msgid "Huru All Rights Reserved."
 msgstr "Huru haki zote zimehifadhiwa."
 
 #: .\templates\includes\hcw_menu.html:18
@@ -40,8 +42,8 @@ msgstr "Huru kwa watu wenye shida ya matumizi ya dawa za kulevya"
 
 #: .\templates\includes\hcw_menu.html:50 .\templates\includes\hcw_menu.html:75
 #: .\templates\includes\menu.html:56 .\templates\includes\menu.html:89
-#: .\templates\main\about_us.html:13 .\templates\main\blog.html:12
-#: .\templates\main\category_detail.html:12 .\templates\main\hcw_blog.html:12
+#: .\templates\main\about_us.html:13 .\templates\main\blog.html:14
+#: .\templates\main\category_detail.html:14 .\templates\main\hcw_blog.html:12
 #: .\templates\main\hcw_category_detail.html:12
 #: .\templates\main\services.html:13 .\templates\main\testimony.html:13
 msgid "Home"
@@ -49,7 +51,7 @@ msgstr "Nyumbani"
 
 #: .\templates\includes\hcw_menu.html:53 .\templates\includes\hcw_menu.html:78
 #: .\templates\includes\menu.html:59 .\templates\includes\menu.html:92
-#: .\templates\main\blog.html:13 .\templates\main\hcw_blog.html:13
+#: .\templates\main\blog.html:15 .\templates\main\hcw_blog.html:13
 msgid "Information"
 msgstr "Habari"
 
@@ -158,42 +160,46 @@ msgstr ""
 "kutoka shida ya utumiaji wa dawa na kujenga jamii yenye afya ambayo haina "
 "utumiaji wa dawa za kulevya"
 
-#: .\templates\main\blog.html:15 .\templates\main\hcw_blog.html:15
+#: .\templates\main\article_detail.html:31
+msgid "Date published"
+msgstr "Tarehe iliyochapishwa"
+
+#: .\templates\main\blog.html:17 .\templates\main\hcw_blog.html:15
 msgid "Posts"
 msgstr "Machapisho"
 
-#: .\templates\main\blog.html:26 .\templates\main\hcw_blog.html:26
-#: .\templates\main\hcw_home.html:71 .\templates\main\home.html:71
+#: .\templates\main\blog.html:28 .\templates\main\hcw_blog.html:26
+#: .\templates\main\hcw_home.html:71 .\templates\main\home.html:73
 msgid "Our Popular Posts"
 msgstr "Machapisho Yetu Maarufu"
 
-#: .\templates\main\blog.html:28 .\templates\main\hcw_blog.html:28
-#: .\templates\main\hcw_home.html:73 .\templates\main\home.html:73
+#: .\templates\main\blog.html:30 .\templates\main\hcw_blog.html:28
+#: .\templates\main\hcw_home.html:73 .\templates\main\home.html:75
 msgid "All Posts"
 msgstr "Machapisho Yote"
 
-#: .\templates\main\blog.html:68 .\templates\main\category_detail.html:43
+#: .\templates\main\blog.html:56 .\templates\main\category_detail.html:45
 #: .\templates\main\hcw_blog.html:54
 #: .\templates\main\hcw_category_detail.html:43
-#: .\templates\main\hcw_home.html:98 .\templates\main\home.html:113
+#: .\templates\main\hcw_home.html:98 .\templates\main\home.html:101
 msgid "Read More"
 msgstr "Soma zaidi"
 
-#: .\templates\main\blog.html:76 .\templates\main\category_detail.html:51
+#: .\templates\main\blog.html:64 .\templates\main\category_detail.html:53
 #: .\templates\main\hcw_blog.html:62
 #: .\templates\main\hcw_category_detail.html:51
-#: .\templates\main\hcw_home.html:106 .\templates\main\home.html:121
+#: .\templates\main\hcw_home.html:106 .\templates\main\home.html:109
 msgid "By"
 msgstr "Na"
 
-#: .\templates\main\blog.html:93 .\templates\main\category_detail.html:68
+#: .\templates\main\blog.html:81 .\templates\main\category_detail.html:70
 #: .\templates\main\hcw_blog.html:79
 #: .\templates\main\hcw_category_detail.html:68
-#: .\templates\main\hcw_home.html:123 .\templates\main\home.html:138
+#: .\templates\main\hcw_home.html:123 .\templates\main\home.html:126
 msgid "No Post"
 msgstr "Hakuna Chapisho"
 
-#: .\templates\main\category_detail.html:13
+#: .\templates\main\category_detail.html:15
 #: .\templates\main\hcw_category_detail.html:13
 #, fuzzy
 #| msgid "Information"
@@ -201,66 +207,76 @@ msgid "Category - Information"
 msgstr "Habari"
 
 #: .\templates\main\hcw_home.html:15 .\templates\main\hcw_home.html:33
-#: .\templates\main\hcw_home.html:51 .\templates\main\home.html:15
-#: .\templates\main\home.html:33 .\templates\main\home.html:51
+#: .\templates\main\hcw_home.html:51 .\templates\main\home.html:17
+#: .\templates\main\home.html:35 .\templates\main\home.html:53
 msgid "You are not alone"
 msgstr "Hauko peke yako"
 
-#: .\templates\main\hcw_home.html:16 .\templates\main\home.html:16
+#: .\templates\main\hcw_home.html:16 .\templates\main\home.html:18
 msgid "Recovery is Possible"
 msgstr "Kupona kunawezekana"
 
-#: .\templates\main\hcw_home.html:17 .\templates\main\home.html:17
+#: .\templates\main\hcw_home.html:17 .\templates\main\home.html:19
 msgid ""
 "You can stop using drugs, you just have to make the decision to do so today."
-msgstr "Unaweza kuacha kutumia dawa za kulevya, unapaswa kuamua kufanya hivyo leo"
+msgstr ""
+"Unaweza kuacha kutumia dawa za kulevya, unapaswa kuamua kufanya hivyo leo"
 
 #: .\templates\main\hcw_home.html:20 .\templates\main\hcw_home.html:38
-#: .\templates\main\hcw_home.html:56 .\templates\main\home.html:20
-#: .\templates\main\home.html:38 .\templates\main\home.html:56
+#: .\templates\main\hcw_home.html:56 .\templates\main\home.html:22
+#: .\templates\main\home.html:40 .\templates\main\home.html:58
 msgid "search services"
 msgstr "tafuta huduma"
 
-#: .\templates\main\hcw_home.html:34 .\templates\main\home.html:34
+#: .\templates\main\hcw_home.html:34 .\templates\main\home.html:36
 msgid "Are you ready to get the real you back?"
 msgstr "Uko tayari kurudisha uhalisia wako?"
 
-#: .\templates\main\hcw_home.html:35 .\templates\main\home.html:35
+#: .\templates\main\hcw_home.html:35 .\templates\main\home.html:37
 msgid ""
 "We will help you to find where you can go for treatment and other essential "
 "services"
-msgstr "Tutakusaidia kufahamu vituo ambavyo unaweza kwenda kupata matibabu na huduma nyingine muhimu."
+msgstr ""
+"Tutakusaidia kufahamu vituo ambavyo unaweza kwenda kupata matibabu na huduma "
+"nyingine muhimu."
 
-#: .\templates\main\hcw_home.html:52 .\templates\main\home.html:52
+#: .\templates\main\hcw_home.html:52 .\templates\main\home.html:54
 msgid "Addiction affects all communities"
 msgstr "Uraibu huathiri jamii zote"
 
-#: .\templates\main\hcw_home.html:53 .\templates\main\home.html:53
+#: .\templates\main\hcw_home.html:53 .\templates\main\home.html:55
 msgid ""
 "Making the decision to find a detox center or drug or alcohol rehab is the "
 "first step toward a new, healthy life."
 msgstr ""
-"Maamuzi ya kufika kwenye kituo cha huduma ya urahibu ni hatua ya kwanza kuelekea maisha yenye afya njema."
+"Maamuzi ya kufika kwenye kituo cha huduma ya urahibu ni hatua ya kwanza "
+"kuelekea maisha yenye afya njema."
 
-#: .\templates\main\hcw_home.html:143 .\templates\main\home.html:238
+#: .\templates\main\hcw_home.html:143
 msgid "Total Articals"
 msgstr "Jumla ya Nakala"
 
-#: .\templates\main\home.html:151
+#: .\templates\main\home.html:139
 msgid "Testimony"
 msgstr "Ushuhuda"
 
-#: .\templates\main\home.html:154
+#: .\templates\main\home.html:142
 msgid "View All"
 msgstr "Tazama zote"
 
-#: .\templates\main\home.html:207 .\templates\main\testimony.html:69
+#: .\templates\main\home.html:180
 msgid "No Testimony"
 msgstr "Hakuna Ushuhuda"
 
-#: .\templates\main\home.html:228
+#: .\templates\main\home.html:201
 msgid "Available Services"
 msgstr "Huduma Zinazopatikana"
+
+#: .\templates\main\home.html:211
+#, fuzzy
+#| msgid "Total Articals"
+msgid "Total Articles"
+msgstr "Jumla ya Nakala"
 
 #: .\templates\main\services.html:16
 msgid "Services"
@@ -297,3 +313,7 @@ msgstr "ushuhuda"
 #: .\templates\main\testimony.html:16
 msgid "People Testimony"
 msgstr "Ushuhuda wa Watu"
+
+#: .\templates\main\testimony.html:69
+msgid "Coming Soon"
+msgstr "Itakuja Hivi Karibuni"
