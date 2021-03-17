@@ -15,5 +15,5 @@ class ArticleSerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
-        fields = ['facility', 'facility_type', 'service_offered',
+        fields = ['id', 'facility', 'facility_type', 'service_offered',
                   'contact', 'region', 'district', 'location']
