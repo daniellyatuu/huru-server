@@ -4,7 +4,7 @@ from .base import *
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.huruapp.org',
-                 'huruapp.org', '192.168.43.155']
+                 'huruapp.org', '192.168.1.97']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
