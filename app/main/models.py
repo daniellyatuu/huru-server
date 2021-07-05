@@ -49,6 +49,7 @@ class Article(models.Model):
         Group, related_name='article_belong_to', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+    views = models.PositiveIntegerField(blank=True, null=True)
 
     class Meta:
         ordering = ['-id']

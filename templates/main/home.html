@@ -74,7 +74,7 @@
             <a href="" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{% trans 'All Posts' %}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
             {% endif %}
         </div>
-        
+
         {% if posts.count != 0 %}
         <div class="shorting">
             <div class="row">
@@ -91,12 +91,12 @@
                         </div>
 
                         <div class="courses-content">
-                            
+
                             <h3><a href="{% url 'main:blog_detail' post.id %}" class="d-inline-block">{% if LANGUAGE_CODE == 'sw' %} {{post.sw_title|default_if_none:''}} {% else %} {{post.title}} {% endif %}</a></h3>
 
                             <div>
-                                
-                                {% if post.content|length > 300 %}
+
+                            {% if post.content|length > 300 %}
                             <a href="{% url 'main:blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
                             </div>
@@ -110,6 +110,11 @@
 
                                 <li class="">
                                     {{post.date_posted}}
+                                </li>
+
+                                <li class="">
+                                  <br/>
+                                    Views {{post.views|default_if_none:'0'}}
                                 </li>
                             </ul>
 
@@ -133,7 +138,7 @@
 <!-- testimony .start -->
 <section class="blog-area pb-70">
     <div class="container">
-        
+
         <div class="section-title text-left">
             <h2>{% trans 'Testimony' %}</h2>
             {% if testimonies.count >= 10 %}
@@ -141,7 +146,7 @@
                     class="label">{% trans 'View All' %}</span><i class='bx bx-show-alt icon-arrow after'></i></a>
             {% endif %}
         </div>
-            
+
         {% if testimonies.count != 0 %}
 
         <div class="shorting">
@@ -162,11 +167,11 @@
                                 </li>
                             </ul>
                             <h3><a href="{% url 'main:testimony_detail' obj.id %}" class="d-inline-block">{{obj.title}}</a></h3>
-                                
+
                             {% if obj.content|length > 300 %}
                             <a href="{% url 'main:testimony_detail' obj.id %}" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
-                            
+
                         </div>
                     </div>
                 </div>
@@ -183,8 +188,8 @@
 </section>
 <!-- testimony ./end -->
 
-    
-    
+
+
 
 <!-- Start Funfacts Area -->
 <section class="funfacts-area">
@@ -211,7 +216,7 @@
                     </div>
                 </div>
 
-                
+
                 {% comment %}
                 <div class="col-lg-4 col-md-4 col-6">
                     <div class="single-funfact">
@@ -223,7 +228,7 @@
                     </div>
                 </div>
                 {% endcomment %}
-                    
+
 
             </div>
 
