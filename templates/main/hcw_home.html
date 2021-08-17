@@ -82,7 +82,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-box mb-30">
                         <div class="courses-image text-center">
-                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
+                            <a href="{% url 'main:count_blog' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
 
                             <div class="courses-tag">
                                 <a href="{% url 'main:hcw_category_information' post.category_id %}" class="d-block">{{post.category}}</a>
@@ -90,12 +90,12 @@
                         </div>
 
                         <div class="courses-content">
-                            
-                            <h3><a href="{% url 'main:hcw_blog_detail' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
+
+                            <h3><a href="{% url 'main:count_blog' post.id %}" class="d-inline-block">{{post.title}}</a></h3>
                             <div>
-                                 
+
                                 {% if post.content|length > 300 %}
-                            <a href="{% url 'main:hcw_blog_detail' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="{% url 'main:count_blog' post.id %}" class="read-more-btn">{% trans 'Read More' %} <i class='bx bx-right-arrow-alt'></i></a>
                             {% endif %}
                             </div>
                         </div>
@@ -133,7 +133,7 @@
     <div class="container">
         <div class="funfacts-inner">
             <div class="row">
-               
+
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="single-funfact">
                         <div class="icon">

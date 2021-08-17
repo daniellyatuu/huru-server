@@ -3,7 +3,7 @@ from .base import *
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.huruapp.org',
                  'huruapp.org', '192.168.43.155']
