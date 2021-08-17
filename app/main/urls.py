@@ -11,6 +11,7 @@ urlpatterns = [
     path('testimony/', views.TestimonyView.as_view(), name='testimony'),
     path('blog/', views.BlogView.as_view(), name='blog'),
     path('hcw-blog/', views.HcwBlogView.as_view(), name='hcw_blog'),
+    path('count-blog/<int:pk>/', views.CountBlogView.as_view(), name='count_blog'),
     path('blog-detail/<int:pk>/', views.BlogDetailView.as_view(), name='blog_detail'),
     path('hcw-blog-detail/<int:pk>/', views.HcwBlogDetailView.as_view(), name='hcw_blog_detail'),
     path('category-info/<int:pk>', views.CategoryDetailView.as_view(),

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 from app.main.models import Article, Category, Testimony, Service
 from django.views.generic.detail import DetailView
@@ -7,6 +7,8 @@ from django.utils.translation import gettext as _
 from django.utils import translation
 from django.utils.translation import get_language
 from django.db.models import Q
+from django.urls import reverse
+from django.shortcuts import get_object_or_404
 
 
 class HomeView(View):
@@ -90,6 +92,18 @@ class HcwBlogView(View):
             active=True, belong_to__name='hcw')
         return render(request, self.template_name, context)
 
+class CountBlogView(View):
+    def get(self, request, *args, **kwargs):
+
+        obj = get_object_or_404(Article, pk=self.kwargs['pk'])
+
+        view = obj.views
+        view += 1
+
+        obj.views = view
+        obj.save()
+
+        return HttpResponseRedirect(reverse('main:blog_detail', kwargs={'pk': self.kwargs['pk']}))
 
 class BlogDetailView(DetailView):
     model = Article
