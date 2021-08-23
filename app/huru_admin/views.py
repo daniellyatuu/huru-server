@@ -104,8 +104,11 @@ class AddArticle(generic.CreateView):
         new_filename = str(new_filename)+str(file_extension)
         # generate image_new name ./end
 
-        name_path = 'cover_photo/'+new_filename
-        namepath = 'media/'+name_path
+        # name_path = 'cover_photo/'+new_filename
+        # namepath = 'media/'+name_path
+
+        name_path = os.path.join('cover_photo', new_filename)
+        namepath = os.path.join('media', name_path)
 
         img.save(namepath, img.format, quality=90)
         img.close()
