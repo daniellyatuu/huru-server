@@ -117,7 +117,7 @@ class AddArticle(generic.CreateView):
         # RESIZE IMAGE .END
         ################################
 
-        self.object.cover_photo = name_path
+        # self.object.cover_photo = name_path
         self.object.user = self.request.user
 
         return super().form_valid(form)
