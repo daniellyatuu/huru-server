@@ -56,7 +56,7 @@ class Article(models.Model):
     def save(self, *args, **kwargs):
         if self.is_image_compressed == False:
             new_image = self.compress(self.cover_photo)
-            self.filename = new_image
+            self.cover_photo = new_image
             self.is_image_compressed = True
         super().save(*args, **kwargs)
 
