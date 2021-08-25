@@ -60,15 +60,11 @@ class AddArticle(generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
 
-        # ################################
-        # # RESIZE IMAGE .START
-        # ################################
+        # # ################################
+        # # # RESIZE IMAGE .START
+        # # ################################
         cover_photo = self.request.FILES.get('cover_photo', None)
-
-        name_path = resizeImageView(cover_photo)
-
-        print('back from function == ', name_path)
-
+        
         # # resize image (800px * 800px)
         # img = Image.open(cover_photo)
         #
@@ -120,7 +116,7 @@ class AddArticle(generic.CreateView):
         # ################################
         # # RESIZE IMAGE .END
         # ################################
-        #
+
         self.object.cover_photo = cover_photo
         self.object.user = self.request.user
 
@@ -132,65 +128,6 @@ class AddArticle(generic.CreateView):
                              'Article was added successfully')
         return reverse('huru_admin:article')
 
-
-def resizeImageView(cover_photo):
-
-    # ################################
-    # # RESIZE IMAGE .START
-    # ################################
-
-    # resize image (800px * 800px)
-    img = Image.open(cover_photo)
-
-    # check image size
-    width = img.size[0]
-    height = img.size[1]
-
-    aspect = width / float(height)
-
-    ideal_width = 800
-    ideal_height = 800
-
-    ideal_aspect = ideal_width / float(ideal_height)
-
-    if aspect > ideal_aspect:
-        # Then crop the left and right edges:
-        new_width = int(ideal_aspect * height)
-        offset = (width - new_width) / 2
-        resize = (offset, 0, width - offset, height)
-    else:
-        # ... crop the top and bottom:
-        new_height = int(width / ideal_aspect)
-        offset = (height - new_height) / 2
-        resize = (0, offset, width, height - offset)
-
-    img = img.crop(resize).resize(
-        (ideal_width, ideal_height), Image.ANTIALIAS)
-
-    # generate image_new name .start
-    filename, file_extension = os.path.splitext(cover_photo.name)
-
-    filename = filename.replace(' ', '')
-    new_filename = str(filename) + \
-        str(datetime.datetime.now().timestamp())
-
-    new_filename = new_filename.replace('.', '')
-    new_filename = str(new_filename)+str(file_extension)
-    # generate image_new name ./end
-
-    name_path = 'cover_photo/'+new_filename
-    namepath = 'media/'+name_path
-
-    # name_path = os.path.join('cover_photo', new_filename)
-    # namepath = os.path.join('media', name_path)
-
-    img.save(namepath, img.format, quality=90)
-    img.close()
-
-    ################################
-    # RESIZE IMAGE .END
-    ################################
-    return name_path
 
 class TestimonyView(View):
     template_name = 'huru_admin/testimony.html'
