@@ -54,9 +54,7 @@ class Article(models.Model):
 
     # calling image compression function before saving the data
     def save(self, *args, **kwargs):
-        print('step 1')
         if self.is_image_compressed == False:
-            print('step 2')
             new_image = self.compress(self.cover_photo)
             self.filename = new_image
             self.is_image_compressed = True
@@ -64,7 +62,6 @@ class Article(models.Model):
 
     # image compression method
     def compress(self, filename):
-        print('step 3')
         im = Image.open(filename)
 
         im = im.convert('RGB')
