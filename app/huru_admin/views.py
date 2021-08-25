@@ -107,11 +107,11 @@ class AddArticle(generic.CreateView):
         # name_path = 'cover_photo/'+new_filename
         # namepath = 'media/'+name_path
 
-        name_path = os.path.join('cover_photo', new_filename)
-        namepath = os.path.join('media', name_path)
-
-        img.save(namepath, img.format, quality=90)
-        img.close()
+        # name_path = os.path.join('cover_photo', new_filename)
+        # namepath = os.path.join('media', name_path)
+        #
+        # img.save(namepath, img.format, quality=90)
+        # img.close()
 
         ################################
         # RESIZE IMAGE .END
