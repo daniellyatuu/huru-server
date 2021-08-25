@@ -110,7 +110,7 @@ class AddArticle(generic.CreateView):
         name_path = os.path.join('cover_photo', new_filename)
         namepath = os.path.join('media', name_path)
 
-        # img.save(namepath, img.format, quality=90)
+        img.save(namepath, img.format, quality=90)
         img.close()
 
         ################################
