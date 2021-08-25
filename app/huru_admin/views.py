@@ -63,8 +63,8 @@ class AddArticle(generic.CreateView):
         # ################################
         # # RESIZE IMAGE .START
         # ################################
-        # cover_photo = self.request.FILES.get('cover_photo', None)
-        #
+        cover_photo = self.request.FILES.get('cover_photo', None)
+
         # # resize image (800px * 800px)
         # img = Image.open(cover_photo)
         #
@@ -117,7 +117,7 @@ class AddArticle(generic.CreateView):
         # # RESIZE IMAGE .END
         # ################################
         #
-        # self.object.cover_photo = name_path
+        self.object.cover_photo = cover_photo
         self.object.user = self.request.user
 
         return super().form_valid(form)
