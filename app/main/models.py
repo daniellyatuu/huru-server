@@ -52,65 +52,65 @@ class Article(models.Model):
     date_modified = models.DateTimeField(auto_now=True)
     views = models.PositiveIntegerField(default=0)
 
-    # # calling image compression function before saving the data
-    # def save(self, *args, **kwargs):
-    #     if self.is_image_compressed == False:
-    #         new_image = self.compress(self.cover_photo)
-    #         self.filename = new_image
-    #         self.is_image_compressed = True
-    #     super().save(*args, **kwargs)
-    #
-    # # image compression method
-    # def compress(self, filename):
-    #     im = Image.open(filename)
-    #
-    #     im = im.convert('RGB')
-    #
-    #     # get filename extension
-    #     name, ext = os.path.splitext(filename.name)
-    #
-    #     ''' new filename '''
-    #     # current date and time
-    #     now = datetime.now()
-    #     timestamp = datetime.timestamp(now)
-    #     new_name = name + str(timestamp)
-    #     new_name = new_name.replace('.', '')
-    #
-    #     new_filename = new_name+ext
-    #
-    #     # check image size
-    #     width = im.size[0]
-    #     height = im.size[1]
-    #
-    #     aspect = width / float(height)
-    #
-    #     ideal_width = 800
-    #     ideal_height = 800
-    #
-    #     ideal_aspect = ideal_width / float(ideal_height)
-    #
-    #     if aspect > ideal_aspect:
-    #         # Then crop the left and right edges:
-    #         new_width = int(ideal_aspect * height)
-    #         offset = (width - new_width) / 2
-    #         resize = (offset, 0, width - offset, height)
-    #     else:
-    #         # ... crop the top and bottom:
-    #         new_height = int(width / ideal_aspect)
-    #         offset = (height - new_height) / 2
-    #         resize = (0, offset, width, height - offset)
-    #
-    #     im = im.crop(resize).resize(
-    #         (ideal_width, ideal_height), Image.ANTIALIAS)
-    #
-    #     # max_width = 720
-    #     # if im.size[0] > max_width:
-    #     #     im = resizeimage.resize_width(im, max_width)
-    #     im_io = BytesIO()
-    #
-    #     im.save(im_io, 'JPEG', quality=90)
-    #     new_image = File(im_io, name=new_filename)
-    #     return new_image
+    # calling image compression function before saving the data
+    def save(self, *args, **kwargs):
+        print('step 1')
+        if self.is_image_compressed == False:
+            print('step 2')
+            new_image = self.compress(self.cover_photo)
+            self.filename = new_image
+            self.is_image_compressed = True
+        super().save(*args, **kwargs)
+
+    # image compression method
+    def compress(self, filename):
+        print('step 3')
+        im = Image.open(filename)
+
+        im = im.convert('RGB')
+
+        # get filename extension
+        name, ext = os.path.splitext(filename.name)
+
+        ''' new filename '''
+        # current date and time
+        now = datetime.now()
+        timestamp = datetime.timestamp(now)
+        new_name = name + str(timestamp)
+        new_name = new_name.replace('.', '')
+
+        new_filename = new_name+ext
+
+        # check image size
+        width = im.size[0]
+        height = im.size[1]
+
+        aspect = width / float(height)
+
+        ideal_width = 800
+        ideal_height = 800
+
+        ideal_aspect = ideal_width / float(ideal_height)
+
+        if aspect > ideal_aspect:
+            # Then crop the left and right edges:
+            new_width = int(ideal_aspect * height)
+            offset = (width - new_width) / 2
+            resize = (offset, 0, width - offset, height)
+        else:
+            # ... crop the top and bottom:
+            new_height = int(width / ideal_aspect)
+            offset = (height - new_height) / 2
+            resize = (0, offset, width, height - offset)
+
+        im = im.crop(resize).resize(
+            (ideal_width, ideal_height), Image.ANTIALIAS)
+
+        im_io = BytesIO()
+
+        im.save(im_io, 'JPEG', quality=90)
+        new_image = File(im_io, name=new_filename)
+        return new_image
 
     class Meta:
         ordering = ['-id']
