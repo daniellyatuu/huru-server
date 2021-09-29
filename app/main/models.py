@@ -40,6 +40,7 @@ class Article(models.Model):
     sw_title = models.CharField(max_length=100, blank=True, null=True)
     cover_photo = models.ImageField(upload_to='cover_photo')
     display_cover_photo_on_view_article = models.BooleanField(default=True)
+    is_image_compressed = models.BooleanField(default=False)
     content = models.TextField()
     sw_content = models.TextField(blank=True, null=True)
     active = models.BooleanField(default=True)
@@ -53,10 +54,10 @@ class Article(models.Model):
 
     # calling image compression function before saving the data
     def save(self, *args, **kwargs):
-
-        new_image = self.compress(self.cover_photo)
-        self.cover_photo = new_image
-
+        if self.is_image_compressed == False:
+            new_image = self.compress(self.cover_photo)
+            self.cover_photo = new_image
+            self.is_image_compressed = True
         super().save(*args, **kwargs)
 
     # image compression method
@@ -102,9 +103,6 @@ class Article(models.Model):
         im = im.crop(resize).resize(
             (ideal_width, ideal_height), Image.ANTIALIAS)
 
-        # max_width = 720
-        # if im.size[0] > max_width:
-        #     im = resizeimage.resize_width(im, max_width)
         im_io = BytesIO()
 
         im.save(im_io, 'JPEG', quality=90)
