@@ -86,7 +86,21 @@
                             <a href="{% url 'main:count_blog' post.id %}" class="d-block"><img src="/media/{{post.cover_photo}}" alt="image"></a>
 
                             <div class="courses-tag">
-                                <a href="{% url 'main:category_information' post.category_id %}" class="d-block">{{post.category}}</a>
+                                <a href="{% url 'main:category_information' post.category_id %}" class="d-block">
+                                  {% if LANGUAGE_CODE == 'en' %}
+
+                                    {% if post.category != None %}
+                                      {{post.category.name|default_if_none:''}}
+                                    {% endif %}
+
+                                  {% else %}
+
+                                  {% if post.category != None %}
+                                    {{post.category.sw_name|default_if_none:''}}
+                                  {% endif %}
+
+                                  {% endif %}
+                                </a>
                             </div>
                         </div>
 
@@ -212,7 +226,15 @@
                             <i class='bx bx-book-reader'></i>
                         </div>
                         <h3 class="odometer" data-count="{{posts.count}}">00</h3>
-                        <p>{% trans 'Total Articles' %}</p>
+                        <p>
+                          <!-- {% trans 'Total Articles' %} -->
+
+                          {% if LANGUAGE_CODE == 'en' %}
+                          Total Articles
+                          {% else %}
+                          Jumla ya Nakala
+                          {% endif %}
+                        </p>
                     </div>
                 </div>
 

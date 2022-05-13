@@ -13,6 +13,7 @@ import os
 
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
+    sw_name = models.CharField(max_length=255, unique=True, blank=True, null=True)
     active = models.BooleanField(default=True)
     added_by = models.ForeignKey(
         User, related_name='user_category', on_delete=models.CASCADE)

@@ -13,13 +13,13 @@
                     <div class="language-switcher d-inline-block">
                         <form action="{% url 'set_language' %}" method="POST">
                             <div class=" language-switcher d-inline-block">
-                                
+
                                     {% csrf_token %}
                                     <input name="next" type="hidden" value="{{ redirect_to }}">
                                     <select name="language" id="">
                                         {% get_available_languages as LANGUAGES %}
                                         {% get_language_info_list for LANGUAGES as languages %}
-                                        
+
                                         {% for language in languages %}
                                             <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                                                 {{ language.name_local }} ({{ language.code }})
@@ -30,10 +30,10 @@
                             <input type="submit" class="btn btn-light" value="change" style="color: black;">
                         </form>
                     </div>
-                    
+
                     <div class="search-box d-inline-block" style="visibility: hidden;">
                         <i class='bx bx-search'></i>
-                    </div>   
+                    </div>
                 </div>
             </div>
 
@@ -41,12 +41,12 @@
                 <a href="javascript:void(0);" class="d-inline-block">
                     <img src="{% static 'assets/img/new_logo.png' %}" alt="image">
                     </a>
-            </div>            
-            
+            </div>
+
             <p>{% trans 'Copyright' %} <i class='bx bx-copyright'></i>{% now 'Y' %} {% trans 'Huru All Rights Reserved.' %}
             </p>
             <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.huruapp.huruapp" target="_blank"><p><span class="text-white"><i class="fa fa-android" style="font-size: 20px;"></i> Download on Playstore</span></div></p></a>
-            
+
             <p><a href="{% url 'main:privacy_policy'  %}" target="_blank">Huruapp Privacy Policy</a></p>
         </div>
     </div>

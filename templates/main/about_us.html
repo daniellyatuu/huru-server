@@ -77,7 +77,18 @@
                         {% trans 'To create a happy community where people are free from addiction and engage in productive activities' %}
                     </p>
 
-                    <h3>{% trans 'Vision' %}</h3>
+                    <h3>
+                      <!-- {% trans 'Vision' %} -->
+
+                      {% get_current_language as LANGUAGE_CODE %}
+
+                      {% if LANGUAGE_CODE == 'en' %}
+                      Vision
+                      {% else %}
+                      Maono
+                      {% endif %}
+
+                    </h3>
                     <p style="text-align: justify;text-justify: inter-word;">
                         {% trans 'To ensure access of information and services that facilitate recovery of people from substance use disorder and build a healthy community which is free from drug addiction' %}
                     </p>
