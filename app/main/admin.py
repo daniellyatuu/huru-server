@@ -8,7 +8,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'active', 'added_by', 'date_added']
+    list_display = ['name', 'sw_name', 'active', 'added_by', 'date_added']
 
 
 class TestimonyAdmin(admin.ModelAdmin):
